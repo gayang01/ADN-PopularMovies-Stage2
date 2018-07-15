@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Popular Movies</string>
+    <string name="title_field">Title:</string>
+    <string name="releaseDate_field">Release Date:</string>
+    <string name="vote_field">Vote Average</string>
+    <string name="plot_filed">Plot</string>
+
+
+    <string name="popularMovies_pageName">Popular Movies</string>
+    <string name="topRatedMovies_pageName">Top Rated Movies</string>
+    <string name="linkPreference_popular" translatable="false">popular</string>
+    <string name="linkPreference_top_rated" translatable="false">top_rated</string>
+
+    <string name="api_key" translatable="false">api_key</string>
+
+    <string name="movie_title_bundle" translatable="false">title</string>
+    <string name="movie_releaseDate_bundle" translatable="false">releaseDate</string>
+    <string name="movie_vote_bundle" translatable="false">vote</string>
+    <string name="movie_plot_bundle" translatable="false">plot</string>
+    <string name="movie_image_bundle" translatable="false">image</string>
+
+    <string name="no_connection_error">No internet connection!</string>
+    <string name="no_date_error">No data returned!</string>
+
+
+</resources>
