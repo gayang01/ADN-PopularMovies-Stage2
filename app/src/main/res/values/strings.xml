@@ -5,9 +5,14 @@
     <string name="vote_field">Vote Average</string>
     <string name="plot_filed">Plot</string>
 
-
     <string name="popularMovies_pageName">Popular Movies</string>
     <string name="topRatedMovies_pageName">Top Rated Movies</string>
+    <string name="favouritesMovies_pageName">Favourites Movies</string>
+
+    <string name="popularMovies_menu_name">Popular</string>
+    <string name="topRatedMovies_menu_name">Top Rated</string>
+    <string name="favouritesMovies_menu_name">Favourites</string>
+
     <string name="linkPreference_popular" translatable="false">popular</string>
     <string name="linkPreference_top_rated" translatable="false">top_rated</string>
 
@@ -18,9 +23,13 @@
     <string name="movie_vote_bundle" translatable="false">vote</string>
     <string name="movie_plot_bundle" translatable="false">plot</string>
     <string name="movie_image_bundle" translatable="false">image</string>
+    <string name="movie_id_bundle" translatable="false">movieId</string>
 
     <string name="no_connection_error">No internet connection!</string>
     <string name="no_date_error">No data returned!</string>
+    <string name="no_api_key_error_pop_up">No API key set in MainActivity!</string>
 
+    <string name="add_to_favourites_button_text">Add to favourites</string>
+    <string name="remove_to_favourites_button_text">Remove from favourites</string>
 
 </resources>
