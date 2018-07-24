@@ -16,4 +16,10 @@
         android:title="@string/favouritesMovies_menu_name"
         app:showAsAction="never" />
 
+    <item
+        android:id="@+id/remove_favourites_menu_item"
+        android:title="@string/remove_favourites_menu_name"
+        app:showAsAction="never" />
+
+
 </menu>

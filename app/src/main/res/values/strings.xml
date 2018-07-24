@@ -12,6 +12,7 @@
     <string name="popularMovies_menu_name">Popular</string>
     <string name="topRatedMovies_menu_name">Top Rated</string>
     <string name="favouritesMovies_menu_name">Favourites</string>
+    <string name="remove_favourites_menu_name">Remove Favourites</string>
 
     <string name="linkPreference_popular" translatable="false">popular</string>
     <string name="linkPreference_top_rated" translatable="false">top_rated</string>
@@ -27,9 +28,11 @@
 
     <string name="no_connection_error">No internet connection!</string>
     <string name="no_date_error">No data returned!</string>
+    <string name="no_favourites_error">No favourites added</string>
     <string name="no_api_key_error_pop_up">No API key set in MainActivity!</string>
 
     <string name="add_to_favourites_button_text">Add to favourites</string>
-    <string name="remove_to_favourites_button_text">Remove from favourites</string>
+    <string name="remove_from_favourites_button_text">Remove from favourites</string>
+    <string name="title_activity_main2">Main2Activity</string>
 
 </resources>

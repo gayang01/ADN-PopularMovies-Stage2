@@ -3,4 +3,5 @@
     <dimen name="small_margin">8dp</dimen>
     <dimen name="medium_margin">16dp</dimen>
     <dimen name="default_textSize">16sp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
 </resources>

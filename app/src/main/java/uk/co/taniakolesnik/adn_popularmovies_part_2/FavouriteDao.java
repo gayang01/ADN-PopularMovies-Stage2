@@ -21,9 +21,12 @@ public interface FavouriteDao {
     @Query("SELECT * FROM favourites")
     List<Movie> selectAll();
 
-    @Query("SELECT * FROM favourites WHERE movieId=:movieId")
-    Movie selectFavourite(int movieId);
+    @Query("SELECT COUNT(*) FROM favourites WHERE movieId=:movieId")
+    int getCountFromFavourites(int movieId);
 
     @Query("DELETE FROM favourites WHERE movieId=:movieId")
     void deleteFavourite(int movieId);
+
+    @Query("DELETE FROM favourites")
+    void deleteAll();
 }

@@ -3,6 +3,7 @@ package uk.co.taniakolesnik.adn_popularmovies_part_2.Utils;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,6 +24,8 @@ import uk.co.taniakolesnik.adn_popularmovies_part_2.R;
  */
 
 public class MovieRecyclerViewAdapter extends RecyclerView.Adapter<MovieRecyclerViewAdapter.ViewHolder> {
+
+    private static final String TAG = MovieRecyclerViewAdapter.class.getSimpleName();
 
     private static final String IMAGE_URL_BASE = "http://image.tmdb.org/t/p/w185/";
     Context context;

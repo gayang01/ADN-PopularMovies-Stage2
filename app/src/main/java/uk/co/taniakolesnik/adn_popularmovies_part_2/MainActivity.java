@@ -1,6 +1,7 @@
 package uk.co.taniakolesnik.adn_popularmovies_part_2;
 
 import android.app.LoaderManager;
+import android.content.Context;
 import android.content.Loader;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -9,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.telecom.Call;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.Menu;
@@ -99,6 +101,9 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                 setTitle(getString(R.string.favouritesMovies_pageName));
                 loadFavourites();
                 return true;
+            case R.id.remove_favourites_menu_item:
+                removeFavourites();
+                return true;
         }
         return super.onOptionsItemSelected(item);
     }
@@ -111,7 +116,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
     @Override
     public void onLoadFinished(Loader<List<Movie>> loader, List<Movie> data) {
-        Log.i(TAG, "onLoadFinished data " + data.toString());
         if (data == null) {
             showErrorMessage(getString(R.string.no_date_error));
         } else {
@@ -129,10 +133,12 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
             @Override
             public void run() {
                 final List<Movie> favourites = favouriteDatabase.favouriteDao().selectAll();
-                Log.i(TAG, "loadFavourites favourites " + favourites.toString());
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
+                        if (favourites.size() == 0){
+                            showErrorMessage(getApplicationContext().getString(R.string.no_favourites_error));
+                        }
                         adapter.updateAdapter(favourites);
                     }
                 });
@@ -140,6 +146,17 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         });
 
     }
+
+
+    private void removeFavourites() {
+        AppExecutors.getsInstance().getDatabaseExecutor().execute(new Runnable() {
+            @Override
+            public void run() {
+                favouriteDatabase.favouriteDao().deleteAll();
+            }
+        });
+    }
+
 
     private String makeUrl(String preference) {
         Uri.Builder builder = new Uri.Builder();

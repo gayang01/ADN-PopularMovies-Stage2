@@ -9,13 +9,13 @@
     </style>
 
     <!-- Movie details layout -->
-    <style name="MovieDetailsLayout" >
+    <style name="MovieDetailsLayout">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
 
     <!-- Movie details list-->
-    <style name="MovieDetailsFields" >
+    <style name="MovieDetailsFields">
         <item name="android:layout_marginTop">@dimen/small_margin</item>
         <item name="android:layout_marginLeft">@dimen/medium_margin</item>
         <item name="android:layout_marginRight">@dimen/medium_margin</item>
@@ -26,7 +26,7 @@
     </style>
 
     <!-- Movie details list values -->
-    <style name="MovieDetailsValues" >
+    <style name="MovieDetailsValues">
         <item name="android:layout_marginTop">@dimen/small_margin</item>
         <item name="android:layout_marginLeft">@dimen/medium_margin</item>
         <item name="android:layout_marginRight">@dimen/medium_margin</item>
@@ -34,5 +34,14 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">@dimen/default_textSize</item>
     </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 </resources>

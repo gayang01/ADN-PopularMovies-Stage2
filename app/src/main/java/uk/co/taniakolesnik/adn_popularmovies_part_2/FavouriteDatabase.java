@@ -9,7 +9,7 @@ import android.content.Context;
  * Created by tetianakolesnik on 24/07/2018.
  */
 
-@Database(entities = {Movie.class}, version = 2, exportSchema = false)
+@Database(entities = {Movie.class}, version = 3, exportSchema = false)
 public abstract class FavouriteDatabase extends RoomDatabase{
 
 
@@ -21,7 +21,6 @@ public abstract class FavouriteDatabase extends RoomDatabase{
         if (sIntance == null) {
             synchronized (LOCK) {
                 sIntance = Room.databaseBuilder(context, FavouriteDatabase.class, DATABASE_NAME)
-                        .allowMainThreadQueries() // TODO remove allowMainThreadQueries after tests
                         .fallbackToDestructiveMigration()
                         .build();
             }
