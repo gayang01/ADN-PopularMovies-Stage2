@@ -1,5 +1,8 @@
 package uk.co.taniakolesnik.adn_popularmovies_part_2.Utils;
 
+import android.provider.MediaStore;
+import android.util.Log;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -15,6 +18,7 @@ import java.nio.charset.Charset;
 import java.util.ArrayList;
 
 import uk.co.taniakolesnik.adn_popularmovies_part_2.Movie;
+import uk.co.taniakolesnik.adn_popularmovies_part_2.Video;
 
 /**
  * Created by tetianakolesnik on 02/06/2018.
@@ -22,12 +26,16 @@ import uk.co.taniakolesnik.adn_popularmovies_part_2.Movie;
 
 public class MovieUtils {
 
-    private static final String TAG = MovieUtils.class.getSimpleName();
-
     public static ArrayList<Movie> fetchMoviInfo(String urlString) {
         URL url = createUrl(urlString);
         String jsonReply = makeHTTPRequest(url);
         return extractMovie(jsonReply);
+    }
+
+    public static ArrayList<Video> fetchVideoInfo(String urlString) {
+        URL url = createUrl(urlString);
+        String jsonReply = makeHTTPRequest(url);
+        return extractVideo(jsonReply);
     }
 
     private static URL createUrl(String urlString) {
@@ -93,7 +101,7 @@ public class MovieUtils {
     }
 
     private static ArrayList<Movie> extractMovie(String jsonReply) {
-        ArrayList<Movie> movieArrayList = new ArrayList<Movie>();
+        ArrayList<Movie> movieArrayList = new ArrayList<>();
         try {
             JSONObject json = new JSONObject(jsonReply);
             JSONArray jsonArray = json.getJSONArray("results");
@@ -115,6 +123,27 @@ public class MovieUtils {
         }
         return null;
     }
-}
+    private static ArrayList<Video> extractVideo(String jsonReply) {
+        ArrayList<Video> videoArrayList = new ArrayList<>();
+        try {
+            JSONObject json = new JSONObject(jsonReply);
+            JSONArray jsonArray = json.getJSONArray("results");
+            for (int i = 0; i < jsonArray.length(); i++) {
+                JSONObject jsonObject = jsonArray.getJSONObject(i);
+                String videoKey = jsonObject.optString("key");
+                String videoName = jsonObject.optString("name");
+                String videoSite = jsonObject.optString("site");
+                String videoType = jsonObject.optString("type");
+                Video video = new Video(videoKey, videoName, videoSite, videoType);
+                Log.i("MovieUtils", video.toString());
+                videoArrayList.add(video);
+            }
+            return videoArrayList;
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 
+}
 

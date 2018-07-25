@@ -17,6 +17,8 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -33,7 +35,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
     private static final String TAG = MainActivity.class.getSimpleName();
     //please insert your API key here
-    private static final String API_KEY_VALUE = "89d4514e84a96bd998784f6768769127";
+    public static final String API_KEY_VALUE = "89d4514e84a96bd998784f6768769127";
     private static final int LOADER_ID = 1;
     MovieRecyclerViewAdapter adapter;
     @BindView(R.id.recyclerView)

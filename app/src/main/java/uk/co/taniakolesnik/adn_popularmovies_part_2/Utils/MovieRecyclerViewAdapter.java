@@ -27,7 +27,7 @@ public class MovieRecyclerViewAdapter extends RecyclerView.Adapter<MovieRecycler
 
     private static final String TAG = MovieRecyclerViewAdapter.class.getSimpleName();
 
-    private static final String IMAGE_URL_BASE = "http://image.tmdb.org/t/p/w185/";
+    private static final String IMAGE_URL_BASE = "http://image.tmdb.org/t/p/w500/";
     Context context;
     private LayoutInflater layoutInflater;
     private List<Movie> mData;
