@@ -1,40 +1,26 @@
 package uk.co.taniakolesnik.adn_popularmovies_part_2;
-import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
-import android.os.AsyncTask;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.util.TypedValue;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import com.squareup.picasso.Picasso;
 
-import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import uk.co.taniakolesnik.adn_popularmovies_part_2.Utils.AppExecutors;
-import uk.co.taniakolesnik.adn_popularmovies_part_2.Utils.MovieUtils;
+import uk.co.taniakolesnik.adn_popularmovies_part_2.Utils.FetchReviewDetails;
+import uk.co.taniakolesnik.adn_popularmovies_part_2.Utils.FetchVideoDetails;
 
 public class MovieDetails extends AppCompatActivity {
 
     private static final String IMAGE_URL_BASE = "http://image.tmdb.org/t/p/w342/";
-    private static final String VIDEO_URL_BASE = "https://www.youtube.com/watch?v=";
-    private static final String TAG = MovieDetails.class.getSimpleName();
     FavouriteDatabase favouriteDatabase;
     @BindView(R.id.title_tv) TextView titleTextView;
     @BindView(R.id.releaseDate_tv) TextView releaseDateTextView;
@@ -42,7 +28,8 @@ public class MovieDetails extends AppCompatActivity {
     @BindView(R.id.plot_tv) TextView plotTextView;
     @BindView(R.id.posterImageView) ImageView posterView;
     @BindView(R.id.addToFav_button) FloatingActionButton favouriteButton;
-    @BindView(R.id.video_list_view) ListView listView;
+    @BindView(R.id.video_list_view) ListView videoListView;
+    @BindView(R.id.review_list_view) ListView reviewListView;
 
 
     @Override
@@ -63,8 +50,10 @@ public class MovieDetails extends AppCompatActivity {
 
         final Movie favourite = new Movie(title, releaseDate,image, vote, plot, movieId);
 
-        String url = makeVideoUrl(movieId);
-        new FetchVideoDetails().execute(url);
+        String videoUrl = makeVideoUrl(movieId);
+        String reviewUrl = makeReviewUrl(movieId);
+        new FetchVideoDetails(this, videoListView).execute(videoUrl);
+        new FetchReviewDetails(this, reviewListView).execute(reviewUrl);
 
         favouriteButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -95,21 +84,6 @@ public class MovieDetails extends AppCompatActivity {
             }
         });
 
-    }
-
-    private class FetchVideoDetails extends AsyncTask<String, Void, ArrayList<Video>>{
-
-        @Override
-        protected ArrayList<Video> doInBackground(String... strings) {
-            ArrayList<Video> videos = MovieUtils.fetchVideoInfo(strings[0]);
-            return videos;
-        }
-
-        @Override
-        protected void onPostExecute(ArrayList<Video> arrayList) {
-            VideoAdapter adapter = new VideoAdapter(getApplicationContext(), arrayList);
-            listView.setAdapter(adapter);
-        }
     }
 
     private void setFavouriteButtonColor(final int movieId) {
@@ -151,6 +125,19 @@ public class MovieDetails extends AppCompatActivity {
         return builder.toString();
     }
 
+    private String makeReviewUrl(int movieId) {
+        Uri.Builder builder = new Uri.Builder();
+        builder.scheme("https")
+                .authority("api.themoviedb.org")
+                .appendPath("3")
+                .appendPath("movie")
+                .appendPath(String.valueOf(movieId))
+                .appendPath("reviews")
+                .appendQueryParameter(getString(R.string.api_key), MainActivity.API_KEY_VALUE)
+                .build();
+        return builder.toString();
+    }
+
     private void removeMovieFromFavourites(final int movieId) {
         AppExecutors.getsInstance().getDatabaseExecutor().execute(new Runnable() {
             @Override
@@ -171,36 +158,4 @@ public class MovieDetails extends AppCompatActivity {
 
     }
 
-    private class VideoAdapter extends ArrayAdapter<Video> {
-
-        Context context;
-        ArrayList<Video> videos;
-
-        public VideoAdapter(Context context, ArrayList<Video> videos) {
-            super(context, 0, videos);
-            this.context = context;
-            this.videos = videos;
-        }
-
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-            final Video video = getItem(position);
-            final String videoUrl = VIDEO_URL_BASE + video.getVideoKey();
-            if (convertView == null){
-                convertView = LayoutInflater.from(context).inflate(R.layout.video_list_item, parent, false);
-            }
-            TextView name = convertView.findViewById(R.id.videoName_tv);
-            name.setText(video.getVideoName());
-            convertView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(Intent.ACTION_VIEW);
-                    intent.setData(Uri.parse(videoUrl));
-                    startActivity(intent);
-                }
-            });
-            return convertView;
-        }
-
-    }
 }

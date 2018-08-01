@@ -17,8 +17,11 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.ListAdapter;
+import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -178,4 +181,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         emptyTextView.setVisibility(View.VISIBLE);
         emptyTextView.setText(message);
     }
+
+
 }

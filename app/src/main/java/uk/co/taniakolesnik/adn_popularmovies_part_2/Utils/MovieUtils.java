@@ -1,6 +1,5 @@
 package uk.co.taniakolesnik.adn_popularmovies_part_2.Utils;
 
-import android.provider.MediaStore;
 import android.util.Log;
 
 import org.json.JSONArray;
@@ -18,6 +17,7 @@ import java.nio.charset.Charset;
 import java.util.ArrayList;
 
 import uk.co.taniakolesnik.adn_popularmovies_part_2.Movie;
+import uk.co.taniakolesnik.adn_popularmovies_part_2.Review;
 import uk.co.taniakolesnik.adn_popularmovies_part_2.Video;
 
 /**
@@ -36,6 +36,12 @@ public class MovieUtils {
         URL url = createUrl(urlString);
         String jsonReply = makeHTTPRequest(url);
         return extractVideo(jsonReply);
+    }
+
+    public static ArrayList<Review> fetchReviewInfo(String urlString) {
+        URL url = createUrl(urlString);
+        String jsonReply = makeHTTPRequest(url);
+        return extractReview(jsonReply);
     }
 
     private static URL createUrl(String urlString) {
@@ -145,5 +151,26 @@ public class MovieUtils {
         return null;
     }
 
-}
+    private static ArrayList<Review> extractReview(String jsonReply) {
+        ArrayList<Review> reviewArrayList = new ArrayList<>();
+        try {
+            JSONObject json = new JSONObject(jsonReply);
+            JSONArray jsonArray = json.getJSONArray("results");
+            for (int i = 0; i < jsonArray.length(); i++) {
+                JSONObject jsonObject = jsonArray.getJSONObject(i);
+                String reviewAuthor = jsonObject.optString("author");
+                String reviewContent = jsonObject.optString("content");
+                int reviewId = jsonObject.optInt("id");
+                String reviewUrl = jsonObject.optString("url");
+                Review review = new Review(reviewAuthor, reviewContent, reviewId, reviewUrl);
+                Log.i("MovieUtils", review.toString());
+                reviewArrayList.add(review);
+            }
+            return reviewArrayList;
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 
+}

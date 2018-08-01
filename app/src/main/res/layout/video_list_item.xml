@@ -29,6 +29,8 @@
         app:layout_constraintStart_toEndOf="@id/imageView"
         app:layout_constraintTop_toTopOf="parent"
         android:gravity="center_vertical"
-        tools:text="Name Name Name" />
+        tools:text="Name Name Name"
+        android:ellipsize="end"
+        android:maxLines="1"/>
 
 </android.support.constraint.ConstraintLayout>
