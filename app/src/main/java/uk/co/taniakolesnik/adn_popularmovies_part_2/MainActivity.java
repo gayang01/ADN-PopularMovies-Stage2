@@ -30,7 +30,7 @@ import uk.co.taniakolesnik.adn_popularmovies_part_2.Utils.MovieRecyclerViewAdapt
 public class MainActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<List<Movie>> {
 
     //please insert your API key here
-    public static final String API_KEY_VALUE = "89d4514e84a96bd998784f6768769127";
+    public static final String API_KEY_VALUE = "";
     private static final int LOADER_ID = 1;
     MovieRecyclerViewAdapter adapter;
     @BindView(R.id.recyclerView)

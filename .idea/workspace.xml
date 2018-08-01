@@ -11,24 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f0bf084-6f48-463f-b297-e9e687d2420b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/classAnalysis.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/javaCompile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskHistory.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/Movie.java" afterPath="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/Movie.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/MovieDetails.java" afterPath="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/MovieDetails.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_movie_details.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_movie_details.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/review_list_item.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/review_list_item.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/video_list_item.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/video_list_item.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -194,28 +177,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1840">
-              <caret line="151" column="25" lean-forward="false" selection-start-line="151" selection-start-column="25" selection-end-line="151" selection-end-column="25" />
+            <state relative-caret-position="55">
+              <caret line="32" column="48" lean-forward="false" selection-start-line="32" selection-start-column="48" selection-end-line="32" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1836#1879#0" expanded="true" />
-                <element signature="e#1971#2013#0" expanded="true" />
-                <element signature="e#2392#2431#0" expanded="true" />
-                <element signature="e#3147#3189#0" expanded="true" />
-                <element signature="e#3216#3258#0" expanded="true" />
-                <element signature="e#3434#3478#0" expanded="true" />
-                <element signature="e#3505#3548#0" expanded="true" />
-                <element signature="e#3721#3766#0" expanded="true" />
-                <element signature="e#4233#4266#0" expanded="true" />
-                <element signature="e#4580#5175#0" expanded="true" />
-                <element signature="e#4774#5149#0" expanded="true" />
-                <element signature="e#4959#5022#0" expanded="true" />
-                <element signature="e#5148#5149#0" expanded="true" />
-                <element signature="e#5174#5175#0" expanded="true" />
-                <element signature="e#5512#5539#0" expanded="true" />
+                <element signature="e#1804#1847#0" expanded="true" />
+                <element signature="e#1939#1981#0" expanded="true" />
+                <element signature="e#2360#2399#0" expanded="true" />
+                <element signature="e#3115#3157#0" expanded="true" />
+                <element signature="e#3184#3226#0" expanded="true" />
+                <element signature="e#3402#3446#0" expanded="true" />
+                <element signature="e#3473#3516#0" expanded="true" />
+                <element signature="e#3689#3734#0" expanded="true" />
+                <element signature="e#4201#4234#0" expanded="true" />
+                <element signature="e#4548#5143#0" expanded="true" />
+                <element signature="e#4742#5117#0" expanded="true" />
+                <element signature="e#4927#4990#0" expanded="true" />
+                <element signature="e#5116#5117#0" expanded="true" />
+                <element signature="e#5142#5143#0" expanded="true" />
+                <element signature="e#5480#5507#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -233,11 +216,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity_movie_details.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="activity_movie_details.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_movie_details.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="385">
-              <caret line="56" column="26" lean-forward="false" selection-start-line="56" selection-start-column="26" selection-end-line="56" selection-end-column="26" />
+              <caret line="56" column="24" lean-forward="true" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
               <folding>
                 <element signature="e#718#745#0" expanded="true" />
                 <element signature="e#941#963#0" expanded="true" />
@@ -343,8 +326,8 @@
       <find>setListViewHeightBasedOnItems</find>
       <find>fetchReviewInfo</find>
       <find>FetchVideoDetails</find>
-      <find>dp</find>
       <find>dur</find>
+      <find>dp</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -2113,8 +2096,8 @@
         <option value="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/Movie.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_movie_details.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/MovieDetails.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/MainActivity.java" />
       </list>
     </option>
   </component>
@@ -2417,7 +2400,7 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1533158343127" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1533158517787" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2464,7 +2447,7 @@
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />
       </Profilers>
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1533158343128" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1533158517788" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2712,7 +2695,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.65954196" sideWeight="0.5030303" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27121213" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27121213" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977098" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977098" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -3124,31 +3107,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1840">
-          <caret line="151" column="25" lean-forward="false" selection-start-line="151" selection-start-column="25" selection-end-line="151" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1836#1879#0" expanded="true" />
-            <element signature="e#1971#2013#0" expanded="true" />
-            <element signature="e#2392#2431#0" expanded="true" />
-            <element signature="e#3147#3189#0" expanded="true" />
-            <element signature="e#3216#3258#0" expanded="true" />
-            <element signature="e#3434#3478#0" expanded="true" />
-            <element signature="e#3505#3548#0" expanded="true" />
-            <element signature="e#3721#3766#0" expanded="true" />
-            <element signature="e#4233#4266#0" expanded="true" />
-            <element signature="e#4580#5175#0" expanded="true" />
-            <element signature="e#4774#5149#0" expanded="true" />
-            <element signature="e#4959#5022#0" expanded="true" />
-            <element signature="e#5148#5149#0" expanded="true" />
-            <element signature="e#5174#5175#0" expanded="true" />
-            <element signature="e#5512#5539#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/MovieDetails.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2">
@@ -3185,7 +3143,7 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_movie_details.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="385">
-          <caret line="56" column="26" lean-forward="false" selection-start-line="56" selection-start-column="26" selection-end-line="56" selection-end-column="26" />
+          <caret line="56" column="24" lean-forward="true" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
           <folding>
             <element signature="e#718#745#0" expanded="true" />
             <element signature="e#941#963#0" expanded="true" />
@@ -3215,6 +3173,31 @@
       </provider>
       <provider editor-type-id="android-designer2">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="55">
+          <caret line="32" column="48" lean-forward="false" selection-start-line="32" selection-start-column="48" selection-end-line="32" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1804#1847#0" expanded="true" />
+            <element signature="e#1939#1981#0" expanded="true" />
+            <element signature="e#2360#2399#0" expanded="true" />
+            <element signature="e#3115#3157#0" expanded="true" />
+            <element signature="e#3184#3226#0" expanded="true" />
+            <element signature="e#3402#3446#0" expanded="true" />
+            <element signature="e#3473#3516#0" expanded="true" />
+            <element signature="e#3689#3734#0" expanded="true" />
+            <element signature="e#4201#4234#0" expanded="true" />
+            <element signature="e#4548#5143#0" expanded="true" />
+            <element signature="e#4742#5117#0" expanded="true" />
+            <element signature="e#4927#4990#0" expanded="true" />
+            <element signature="e#5116#5117#0" expanded="true" />
+            <element signature="e#5142#5143#0" expanded="true" />
+            <element signature="e#5480#5507#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
   </component>
