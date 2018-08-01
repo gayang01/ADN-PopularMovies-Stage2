@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="large_margin">48dp</dimen>
     <dimen name="small_margin">8dp</dimen>
     <dimen name="medium_margin">16dp</dimen>
     <dimen name="default_textSize">16sp</dimen>
+    <dimen name="small_textSize">16sp</dimen>
+    <dimen name="large_textSize">32sp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="movie_title_height">150dp</dimen>
 </resources>

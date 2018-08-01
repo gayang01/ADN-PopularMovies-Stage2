@@ -19,12 +19,15 @@
 
     <string name="api_key" translatable="false">api_key</string>
 
+    <string name="vote_max">/10</string>
+
     <string name="movie_title_bundle" translatable="false">title</string>
     <string name="movie_releaseDate_bundle" translatable="false">releaseDate</string>
     <string name="movie_vote_bundle" translatable="false">vote</string>
     <string name="movie_plot_bundle" translatable="false">plot</string>
     <string name="movie_image_bundle" translatable="false">image</string>
     <string name="movie_id_bundle" translatable="false">movieId</string>
+    <string name="duration_bundle" translatable="false">duration</string>
 
     <string name="no_connection_error">No internet connection!</string>
     <string name="no_date_error">No data returned!</string>

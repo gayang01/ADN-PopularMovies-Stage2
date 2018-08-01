@@ -15,7 +15,7 @@
         android:textSize="14sp"
         android:fontFamily="sans-serif-smallcaps"
         android:gravity="center_horizontal"
-        android:layout_marginLeft="8dp"
+        android:layout_marginStart="@dimen/small_margin"
         tools:text="Name:" />
 
     <TextView
@@ -27,9 +27,7 @@
         android:fontFamily="serif-monospace"
         app:layout_constraintTop_toTopOf="parent"
         android:gravity="center_vertical"
-        tools:text="Content Content ContentContent Content ContentContent
-        Content ContentContent Content ContentContent Content ContentContent Content ContentContent Content ContentContent Content ContentContent Content ContentContent Content ContentContent Content ContentContent Content ContentContent Content ContentContent Content ContentContent Content ContentContent Content ContentContent Content Content"
-        android:layout_marginRight="8dp"
+        android:layout_marginEnd="@dimen/small_margin"
         android:ellipsize="end"
         android:maxLines="4"/>
 

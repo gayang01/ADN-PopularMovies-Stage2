@@ -29,7 +29,6 @@ import uk.co.taniakolesnik.adn_popularmovies_part_2.Utils.MovieRecyclerViewAdapt
 
 public class MainActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<List<Movie>> {
 
-    private static final String TAG = MainActivity.class.getSimpleName();
     //please insert your API key here
     public static final String API_KEY_VALUE = "89d4514e84a96bd998784f6768769127";
     private static final int LOADER_ID = 1;
@@ -151,7 +150,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                 .appendPath(preference)
                 .appendQueryParameter(getString(R.string.api_key), API_KEY_VALUE)
                 .build();
-        Log.i(TAG, "makeUrl link created" + builder.toString());
         return builder.toString();
     }
 

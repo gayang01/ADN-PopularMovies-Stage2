@@ -14,153 +14,130 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/title_tv"
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:background="@color/colorAccent"
-            android:gravity="center_vertical"
-            android:paddingLeft="32dp"
-            android:fontFamily="serif-monospace"
-            android:textColor="@android:color/white"
-            android:textSize="36sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="Title" />
+            <TextView
+                android:id="@+id/title_tv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/movie_title_height"
+                android:background="@color/colorAccent"
+                android:fontFamily="serif-monospace"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/medium_margin"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/large_textSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/posterImageView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="8dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/title_tv"
-            app:srcCompat="@drawable/testposter" />
+            <ImageView
+                android:id="@+id/posterImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/large_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title_tv"
+                app:srcCompat="@drawable/testposter" />
 
-        <TextView
-            android:id="@+id/releaseDate_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="48dp"
-            android:layout_marginTop="16dp"
-            android:textSize="18sp"
-            android:fontFamily="serif-monospace"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/posterImageView"
-            app:layout_constraintTop_toBottomOf="@+id/title_tv"
-            tools:text="2018-16-03" />
+            <TextView
+                android:id="@+id/releaseDate_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/large_margin"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:fontFamily="serif-monospace"
+                android:textSize="@dimen/default_textSize"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/posterImageView"
+                app:layout_constraintTop_toBottomOf="@+id/title_tv" />
 
-        <TextView
-            android:id="@+id/duration_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="120min"
-            android:textStyle="bold|italic"
-            android:fontFamily="serif-monospace"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/releaseDate_tv"
-            app:layout_constraintTop_toBottomOf="@+id/releaseDate_tv"
-            tools:text="120min" />
-
-        <TextView
-            android:id="@+id/vote_tv"
-            android:layout_width="58dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="serif-monospace"
-            android:layout_marginTop="12dp"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/duration_tv"
-            app:layout_constraintTop_toBottomOf="@+id/duration_tv"
-            tools:text="6" />
+            <TextView
+                android:id="@+id/vote_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:fontFamily="serif-monospace"
+                android:textSize="@dimen/default_textSize"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/releaseDate_tv"
+                app:layout_constraintTop_toBottomOf="@+id/releaseDate_tv" />
 
             <TextView
                 android:id="@+id/plot_tv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="48dp"
+                android:layout_marginEnd="@dimen/medium_margin"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/large_margin"
                 android:fontFamily="serif-monospace"
+                android:textSize="@dimen/default_textSize"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/posterImageView"
-                tools:text="TextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextView" />
+                app:layout_constraintTop_toBottomOf="@+id/posterImageView" />
 
-          <View
-              android:id="@+id/divider_videos"
-              android:layout_width="match_parent"
-              android:layout_height="1dp"
-              android:layout_marginBottom="16dp"
-              android:background="@color/colorPrimaryDark"
-              android:layout_margin="16dp"
-              app:layout_constraintStart_toStartOf="@+id/plot_tv"
-              app:layout_constraintTop_toBottomOf="@+id/plot_tv">
+            <View
+                android:id="@+id/divider_videos"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="@dimen/medium_margin"
+                android:layout_marginBottom="@dimen/medium_margin"
+                android:background="@color/colorPrimaryDark"
+                app:layout_constraintStart_toStartOf="@+id/plot_tv"
+                app:layout_constraintTop_toBottomOf="@+id/plot_tv">
 
-          </View>
+            </View>
 
             <TextView
                 android:id="@+id/trailer_label_tv"
-                android:fontFamily="sans-serif-smallcaps"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/small_margin"
+                android:fontFamily="sans-serif-smallcaps"
                 android:text="@string/trailer_lavel"
-                app:layout_constraintTop_toTopOf="@+id/divider_videos"
                 app:layout_constraintStart_toStartOf="@+id/plot_tv"
-                tools:layout_editor_absoluteX="13dp" />
-
+                app:layout_constraintTop_toTopOf="@+id/divider_videos" />
 
             <ListView
                 android:id="@+id/video_list_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="@dimen/medium_margin"
                 app:layout_constraintStart_toStartOf="@id/plot_tv"
-                app:layout_constraintTop_toBottomOf="@id/trailer_label_tv">
-            </ListView>
+                app:layout_constraintTop_toBottomOf="@id/trailer_label_tv"/>
 
             <View
                 android:id="@+id/divider_reviews"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginBottom="16dp"
+                android:layout_margin="@dimen/medium_margin"
+                android:layout_marginBottom="@dimen/medium_margin"
                 android:background="@color/colorPrimaryDark"
-                android:layout_margin="16dp"
                 app:layout_constraintStart_toStartOf="@+id/plot_tv"
                 app:layout_constraintTop_toBottomOf="@+id/video_list_view">
 
             </View>
 
-
             <TextView
                 android:id="@+id/reviews_label_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 android:text="@string/reviews_lavel"
+                android:layout_marginTop="@dimen/small_margin"
                 android:fontFamily="sans-serif-smallcaps"
                 app:layout_constraintStart_toStartOf="@id/plot_tv"
-                app:layout_constraintTop_toBottomOf="@id/divider_reviews"
-                tools:layout_editor_absoluteX="13dp" />
+                app:layout_constraintTop_toBottomOf="@id/divider_reviews" />
 
             <ListView
                 android:id="@+id/review_list_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="@dimen/medium_margin"
                 app:layout_constraintStart_toStartOf="@id/plot_tv"
-                app:layout_constraintTop_toBottomOf="@id/reviews_label_tv">
-            </ListView>
+                app:layout_constraintTop_toBottomOf="@id/reviews_label_tv"/>
 
         </android.support.constraint.ConstraintLayout>
 
@@ -170,8 +147,8 @@
         android:id="@+id/addToFav_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="32dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"/>
+        android:layout_alignParentEnd="true"
+        android:layout_margin="32dp" />
 
 </RelativeLayout>

@@ -23,16 +23,17 @@ public class Movie {
     @Override
     public String toString() {
         return "Movie{" +
-                "mTitle='" + title + '\'' +
-                ", mReleaseDate=" + releaseDate +
-                ", mImagePath='" + imagePath + '\'' +
-                ", mVoteAverage=" + voteAverage +
-                ", mMovieId='" + movieId + '\'' +
+                "title='" + title + '\'' +
+                ", releaseDate=" + releaseDate +
+                ", imagePath='" + imagePath + '\'' +
+                ", voteAverage=" + voteAverage +
+                ", movieId='" + movieId + '\'' +
                 '}';
     }
 
     @Ignore
-    public Movie(String title, String releaseDate, String imagePath, int voteAverage, String plot, int movieId) {
+    public Movie(String title, String releaseDate, String imagePath, int voteAverage, String plot,
+                 int movieId) {
         setTitle(title);
         setReleaseDate(releaseDate);
         setImagePath(imagePath);
@@ -41,7 +42,8 @@ public class Movie {
         setMovieId(movieId);
     }
 
-    public Movie(int id, String title, String releaseDate, String imagePath, int voteAverage, String plot, int movieId) {
+    public Movie(int id, String title, String releaseDate, String imagePath, int voteAverage,
+                 String plot, int movieId) {
         set_id(id);
         setTitle(title);
         setReleaseDate(releaseDate);

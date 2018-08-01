@@ -19,7 +19,7 @@ import uk.co.taniakolesnik.adn_popularmovies_part_2.Utils.FetchVideoDetails;
 
 public class MovieDetails extends AppCompatActivity {
 
-    private static final String IMAGE_URL_BASE = "http://image.tmdb.org/t/p/w342/";
+    private static final String IMAGE_URL_BASE = "http://image.tmdb.org/t/p/w500/";
     FavouriteDatabase favouriteDatabase;
     @BindView(R.id.title_tv) TextView titleTextView;
     @BindView(R.id.releaseDate_tv) TextView releaseDateTextView;
@@ -105,7 +105,7 @@ public class MovieDetails extends AppCompatActivity {
         String imagePath = IMAGE_URL_BASE + image;
         titleTextView.setText(title);
         releaseDateTextView.setText(releaseDate);
-        voteTextView.setText(String.valueOf(vote));
+        voteTextView.setText(String.valueOf(vote) + getString(R.string.vote_max));
         plotTextView.setText(plot);
         Uri uri = Uri.parse(imagePath);
         Picasso.with(this).load(uri).into(posterView);
