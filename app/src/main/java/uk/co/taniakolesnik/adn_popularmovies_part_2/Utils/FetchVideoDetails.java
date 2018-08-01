@@ -2,9 +2,6 @@ package uk.co.taniakolesnik.adn_popularmovies_part_2.Utils;
 
 import android.content.Context;
 import android.os.AsyncTask;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 
 import java.util.ArrayList;

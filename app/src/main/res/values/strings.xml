@@ -35,4 +35,7 @@
     <string name="remove_from_favourites_button_text">Remove from favourites</string>
     <string name="title_activity_main2">Main2Activity</string>
 
+    <string name="trailer_lavel">Trailers</string>
+    <string name="reviews_lavel">Reviews</string>
+
 </resources>

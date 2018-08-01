@@ -1,7 +1,5 @@
 package uk.co.taniakolesnik.adn_popularmovies_part_2;
 
-import android.arch.persistence.room.Entity;
-
 /**
  * Created by tetianakolesnik on 28/07/2018.
  */

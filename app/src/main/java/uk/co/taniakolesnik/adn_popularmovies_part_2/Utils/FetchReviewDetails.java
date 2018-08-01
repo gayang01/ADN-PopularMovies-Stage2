@@ -3,9 +3,6 @@ package uk.co.taniakolesnik.adn_popularmovies_part_2.Utils;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -38,7 +35,4 @@ public class FetchReviewDetails extends AsyncTask<String, Void, ArrayList<Review
         listView.setAdapter(adapter);
         ListViewHelper.setListViewHeightBasedOnItems(listView);
     }
-
-    //https://stackoverflow.com/questions/29225539/set-listview-height-dynamically-based-on-multiline-textview-inside-it
-
 }

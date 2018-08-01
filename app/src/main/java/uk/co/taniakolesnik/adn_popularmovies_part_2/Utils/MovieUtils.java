@@ -5,7 +5,6 @@ import android.util.Log;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,8 +13,10 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.charset.Charset;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-
+import java.util.Date;
 import uk.co.taniakolesnik.adn_popularmovies_part_2.Movie;
 import uk.co.taniakolesnik.adn_popularmovies_part_2.Review;
 import uk.co.taniakolesnik.adn_popularmovies_part_2.Video;
@@ -115,11 +116,12 @@ public class MovieUtils {
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
                 String title = jsonObject.optString("original_title");
                 String releaseDate = jsonObject.optString("release_date");
+                String releaseDateYear = getReleaseYear(releaseDate);
                 String imagePath = jsonObject.optString("poster_path");
                 int voteAverage = jsonObject.optInt("vote_average");
                 int movieId = jsonObject.getInt("id");
                 String plot = jsonObject.optString("overview");
-                Movie movie = new Movie(title, releaseDate, imagePath, voteAverage, plot, movieId);
+                Movie movie = new Movie(title, releaseDateYear, imagePath, voteAverage, plot, movieId);
                 //Log.i(TAG, movie.toString());
                 movieArrayList.add(movie);
             }
@@ -129,6 +131,21 @@ public class MovieUtils {
         }
         return null;
     }
+
+    private static String getReleaseYear(String dateString){
+        SimpleDateFormat inputDateFormat = new SimpleDateFormat("yyyy-mm-dd");
+        SimpleDateFormat outputDateFormat = new SimpleDateFormat("yyyy");
+
+        Date date = null;
+        try {
+            date = inputDateFormat.parse(dateString);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        String year = outputDateFormat.format(date);
+        return year;
+    }
+
     private static ArrayList<Video> extractVideo(String jsonReply) {
         ArrayList<Video> videoArrayList = new ArrayList<>();
         try {
@@ -172,5 +189,6 @@ public class MovieUtils {
         }
         return null;
     }
+
 
 }
