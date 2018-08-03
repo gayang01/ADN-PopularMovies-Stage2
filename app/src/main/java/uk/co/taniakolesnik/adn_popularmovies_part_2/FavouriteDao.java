@@ -1,5 +1,6 @@
 package uk.co.taniakolesnik.adn_popularmovies_part_2;
 
+import android.arch.lifecycle.LiveData;
 import android.arch.persistence.room.Dao;
 import android.arch.persistence.room.Insert;
 import android.arch.persistence.room.OnConflictStrategy;
@@ -17,14 +18,11 @@ public interface FavouriteDao {
     void insert(Movie favourite);
 
     @Query("SELECT * FROM favourites")
-    List<Movie> selectAll();
+    LiveData<List<Movie>> selectAll();
 
     @Query("SELECT COUNT(*) FROM favourites WHERE movieId=:movieId")
     int getCountFromFavourites(int movieId);
 
     @Query("DELETE FROM favourites WHERE movieId=:movieId")
     void deleteFavourite(int movieId);
-
-    @Query("DELETE FROM favourites")
-    void deleteAll();
 }

@@ -30,12 +30,12 @@ public class MovieDetails extends AppCompatActivity {
     @BindView(R.id.video_list_view) ListView videoListView;
     @BindView(R.id.review_list_view) ListView reviewListView;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_movie_details);
         ButterKnife.bind(this);
+
 
         Intent intent = getIntent();
         String title = intent.getStringExtra(getString(R.string.movie_title_bundle));

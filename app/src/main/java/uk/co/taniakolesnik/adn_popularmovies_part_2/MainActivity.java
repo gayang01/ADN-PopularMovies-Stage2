@@ -1,10 +1,13 @@
 package uk.co.taniakolesnik.adn_popularmovies_part_2;
 
 import android.app.LoaderManager;
+import android.arch.lifecycle.LiveData;
+import android.arch.lifecycle.Observer;
 import android.content.Loader;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
@@ -30,7 +33,7 @@ import uk.co.taniakolesnik.adn_popularmovies_part_2.Utils.MovieRecyclerViewAdapt
 public class MainActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<List<Movie>> {
 
     //please insert your API key here
-    public static final String API_KEY_VALUE = "";
+    public static final String API_KEY_VALUE = "89d4514e84a96bd998784f6768769127";
     private static final int LOADER_ID = 1;
     MovieRecyclerViewAdapter adapter;
     @BindView(R.id.recyclerView)
@@ -123,22 +126,14 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     }
 
     private void loadFavourites(){
-        AppExecutors.getsInstance().getDatabaseExecutor().execute(new Runnable() {
+        final LiveData<List<Movie>> favourites = favouriteDatabase.favouriteDao().selectAll();
+        favourites.observe(this, new Observer<List<Movie>>() {
             @Override
-            public void run() {
-                final List<Movie> favourites = favouriteDatabase.favouriteDao().selectAll();
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        if (favourites.size() == 0){
-                            showErrorMessage(getApplicationContext().getString(R.string.no_favourites_error));
-                        }
-                        adapter.updateAdapter(favourites);
-                    }
-                });
+            public void onChanged(@Nullable List<Movie> movies) {
+                Log.i("MainActivity", "loadFavourites from LiveData");
+                adapter.updateAdapter(movies);
             }
         });
-
     }
 
     private String makeUrl(String preference) {
