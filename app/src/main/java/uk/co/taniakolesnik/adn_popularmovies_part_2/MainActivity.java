@@ -26,8 +26,8 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import uk.co.taniakolesnik.adn_popularmovies_part_2.Utils.FavouriteDatabase;
-import uk.co.taniakolesnik.adn_popularmovies_part_2.Utils.FavouritesViewModel;
+import uk.co.taniakolesnik.adn_popularmovies_part_2.Database.FavouriteDatabase;
+import uk.co.taniakolesnik.adn_popularmovies_part_2.Database.FavouritesViewModel;
 import uk.co.taniakolesnik.adn_popularmovies_part_2.Utils.MovieAsyncTaskLoader;
 import uk.co.taniakolesnik.adn_popularmovies_part_2.Utils.MovieRecyclerViewAdapter;
 

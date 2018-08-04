@@ -12,7 +12,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import uk.co.taniakolesnik.adn_popularmovies_part_2.Movie;
-import uk.co.taniakolesnik.adn_popularmovies_part_2.MovieDetails;
+import uk.co.taniakolesnik.adn_popularmovies_part_2.MovieDetailsActivity;
 import uk.co.taniakolesnik.adn_popularmovies_part_2.R;
 
 /**
@@ -70,7 +70,7 @@ public class MovieRecyclerViewAdapter extends RecyclerView.Adapter<MovieRecycler
         @Override
         public void onClick(View v) {
             Movie movie = mData.get(getAdapterPosition());
-            Intent intent = new Intent(context, MovieDetails.class);
+            Intent intent = new Intent(context, MovieDetailsActivity.class);
             intent.putExtra(context.getResources().getString(R.string.movie_title_bundle), movie.getTitle());
             intent.putExtra(context.getResources().getString(R.string.movie_releaseDate_bundle), movie.getReleaseDate());
             intent.putExtra(context.getResources().getString(R.string.movie_vote_bundle), movie.getVoteAverage());
