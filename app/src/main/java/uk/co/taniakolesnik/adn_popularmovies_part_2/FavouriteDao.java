@@ -21,7 +21,7 @@ public interface FavouriteDao {
     LiveData<List<Movie>> selectAll();
 
     @Query("SELECT COUNT(*) FROM favourites WHERE movieId=:movieId")
-    int getCountFromFavourites(int movieId);
+    LiveData<Integer> getCountFromFavourites(int movieId);
 
     @Query("DELETE FROM favourites WHERE movieId=:movieId")
     void deleteFavourite(int movieId);

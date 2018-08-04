@@ -1,9 +1,13 @@
 package uk.co.taniakolesnik.adn_popularmovies_part_2;
+import android.arch.lifecycle.LiveData;
+import android.arch.lifecycle.Observer;
 import android.content.Intent;
 import android.net.Uri;
+import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -29,13 +33,13 @@ public class MovieDetails extends AppCompatActivity {
     @BindView(R.id.addToFav_button) FloatingActionButton favouriteButton;
     @BindView(R.id.video_list_view) ListView videoListView;
     @BindView(R.id.review_list_view) ListView reviewListView;
+    boolean isFavourite;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_movie_details);
         ButterKnife.bind(this);
-
 
         Intent intent = getIntent();
         String title = intent.getStringExtra(getString(R.string.movie_title_bundle));
@@ -45,7 +49,6 @@ public class MovieDetails extends AppCompatActivity {
         String plot = intent.getStringExtra(getString(R.string.movie_plot_bundle));
         String image = intent.getStringExtra(getString(R.string.movie_image_bundle));
         setMovieDetails(title, releaseDate, vote, plot, image);
-        setFavouriteButtonColor(movieId);
 
         final Movie favourite = new Movie(title, releaseDate,image, vote, plot, movieId);
 
@@ -54,51 +57,47 @@ public class MovieDetails extends AppCompatActivity {
         new FetchVideoDetails(this, videoListView).execute(videoUrl);
         new FetchReviewDetails(this, reviewListView).execute(reviewUrl);
 
-        favouriteButton.setOnClickListener(new View.OnClickListener() {
+        favouriteDatabase = FavouriteDatabase.getsIntance(this);
+
+        LiveData<Integer> count = favouriteDatabase.favouriteDao().getCountFromFavourites(movieId);
+        count.observe(MovieDetails.this, new Observer<Integer>() {
             @Override
-            public void onClick(View view) {
-                AppExecutors.getsInstance().getDatabaseExecutor().execute(new Runnable() {
-                    @Override
-                    public void run() {
-                        int count = favouriteDatabase.favouriteDao().getCountFromFavourites(movieId);
-                        if (count == 0){
-                            addMovieToFavourites(favourite);
-                            runOnUiThread(new Runnable() {
-                                @Override
-                                public void run() {
-                                    favouriteButton.setImageResource(R.drawable.ic_star_yellow);
-                                }
-                            });
-                        } else {
-                            removeMovieFromFavourites(movieId);
-                            runOnUiThread(new Runnable() {
-                                @Override
-                                public void run() {
-                                    favouriteButton.setImageResource(R.drawable.ic_star_black);
-                                }
-                            });
-                        }
-                    }
-                });
+            public void onChanged(@Nullable Integer countFavourites) {
+                Log.i("MovieDetails", "movieAddedToFavourite countFavourites is " + countFavourites);
+                if (countFavourites == 0){
+                    isFavourite = false;
+                } else {
+                    isFavourite = true;
+                }
+                setFavouriteButtonColor();
             }
         });
 
-    }
-
-    private void setFavouriteButtonColor(final int movieId) {
-        favouriteDatabase = FavouriteDatabase.getsIntance(this);
-        AppExecutors.getsInstance().getDatabaseExecutor().execute(new Runnable() {
+        favouriteButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void run() {
-                int count = favouriteDatabase.favouriteDao().getCountFromFavourites(movieId);
-                if (count == 0){
-                    favouriteButton.setImageResource(R.drawable.ic_star_black);
+            public void onClick(View v) {
+                if (isFavourite){
+                    Log.i("MovieDetails", "movieAddedToFavourite OnClickListener is removeMovieFromFavourites");
+                    removeMovieFromFavourites(movieId);
                 } else {
-                    favouriteButton.setImageResource(R.drawable.ic_star_yellow);
+                    Log.i("MovieDetails", "movieAddedToFavourite OnClickListener is movieAddedToFavourite");
+                    addMovieToFavourites(favourite);
                 }
             }
         });
+
     }
+
+    private void setFavouriteButtonColor() {
+        if (isFavourite){
+            Log.i("MovieDetails", "setFavouriteButtonColor yellow");
+            favouriteButton.setImageResource(R.drawable.ic_star_yellow);
+        } else {
+            Log.i("MovieDetails", "setFavouriteButtonColor black");
+            favouriteButton.setImageResource(R.drawable.ic_star_black);
+        }
+    }
+
 
     private void setMovieDetails(String title, String releaseDate, int vote, String plot, String image) {
 

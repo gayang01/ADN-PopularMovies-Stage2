@@ -21,7 +21,6 @@ public abstract class FavouriteDatabase extends RoomDatabase{
         if (sIntance == null) {
             synchronized (LOCK) {
                 sIntance = Room.databaseBuilder(context, FavouriteDatabase.class, DATABASE_NAME)
-                        .fallbackToDestructiveMigration()
                         .build();
             }
         }
