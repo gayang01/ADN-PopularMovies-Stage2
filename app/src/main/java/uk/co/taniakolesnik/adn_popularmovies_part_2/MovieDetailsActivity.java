@@ -1,22 +1,25 @@
 package uk.co.taniakolesnik.adn_popularmovies_part_2;
-import android.arch.lifecycle.LiveData;
+import android.app.Activity;
+import android.app.LoaderManager;
 import android.arch.lifecycle.Observer;
-import android.arch.lifecycle.ViewModel;
-import android.arch.lifecycle.ViewModelProvider;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
+import android.content.Loader;
 import android.net.Uri;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
+
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -24,12 +27,17 @@ import uk.co.taniakolesnik.adn_popularmovies_part_2.Database.AppExecutors;
 import uk.co.taniakolesnik.adn_popularmovies_part_2.Database.CheckIfFavouriteFactory;
 import uk.co.taniakolesnik.adn_popularmovies_part_2.Database.CheckIfFavouriteViewModel;
 import uk.co.taniakolesnik.adn_popularmovies_part_2.Database.FavouriteDatabase;
-import uk.co.taniakolesnik.adn_popularmovies_part_2.Utils.FetchReviewDetailsAsyncTask;
-import uk.co.taniakolesnik.adn_popularmovies_part_2.Utils.FetchVideoDetailsAsyncTask;
+import uk.co.taniakolesnik.adn_popularmovies_part_2.Utils.ListViewHelper;
+import uk.co.taniakolesnik.adn_popularmovies_part_2.Utils.ReviewAdapter;
+import uk.co.taniakolesnik.adn_popularmovies_part_2.Utils.ReviewAsyncTaskLoader;
+import uk.co.taniakolesnik.adn_popularmovies_part_2.Utils.VideoAdapter;
+import uk.co.taniakolesnik.adn_popularmovies_part_2.Utils.VideoAsyncTaskLoader;
 
-public class MovieDetailsActivity extends AppCompatActivity {
+public class MovieDetailsActivity extends AppCompatActivity{
 
     private static final String IMAGE_URL_BASE = "http://image.tmdb.org/t/p/w500/";
+    private static final int LOADER_VIDEO_ID = 1001;
+    private static final int LOADER_REVIEW_ID = 2002;
     FavouriteDatabase favouriteDatabase;
     @BindView(R.id.title_tv) TextView titleTextView;
     @BindView(R.id.releaseDate_tv) TextView releaseDateTextView;
@@ -40,9 +48,52 @@ public class MovieDetailsActivity extends AppCompatActivity {
     @BindView(R.id.video_list_view) ListView videoListView;
     @BindView(R.id.review_list_view) ListView reviewListView;
     boolean isFavourite;
+    String videoUrl;
+    String reviewUrl;
+
+    private LoaderManager.LoaderCallbacks<List<Video>> callbackVideo
+            = new LoaderManager.LoaderCallbacks<List<Video>>() {
+        @Override
+        public Loader<List<Video>> onCreateLoader(int id, Bundle args) {
+            return new VideoAsyncTaskLoader(getApplicationContext(), videoUrl);
+        }
+
+        @Override
+        public void onLoadFinished(Loader<List<Video>> loader, List<Video> data) {
+            VideoAdapter videoAdapter = new VideoAdapter(getApplicationContext(), data);
+            videoListView.setAdapter(videoAdapter);
+            ListViewHelper.setListViewHeightBasedOnItems(videoListView);
+        }
+
+        @Override
+        public void onLoaderReset(Loader<List<Video>> loader) {
+
+        }
+    };
+
+    private LoaderManager.LoaderCallbacks<List<Review>> callbackReview
+            = new LoaderManager.LoaderCallbacks<List<Review>>() {
+        @Override
+        public Loader<List<Review>> onCreateLoader(int id, Bundle args) {
+            return new ReviewAsyncTaskLoader(getApplicationContext(), reviewUrl);
+        }
+
+        @Override
+        public void onLoadFinished(Loader<List<Review>> loader, List<Review> data) {
+            ReviewAdapter reviewAdapter = new ReviewAdapter(getApplicationContext(), data);
+            reviewListView.setAdapter(reviewAdapter);
+            ListViewHelper.setListViewHeightBasedOnItems(reviewListView);
+        }
+
+        @Override
+        public void onLoaderReset(Loader<List<Review>> loader) {
+
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_movie_details);
         ButterKnife.bind(this);
@@ -57,11 +108,11 @@ public class MovieDetailsActivity extends AppCompatActivity {
         setMovieDetails(title, releaseDate, vote, plot, image);
 
         final Movie favourite = new Movie(title, releaseDate,image, vote, plot, movieId);
+        videoUrl = makeVideoUrl(movieId);
+        reviewUrl = makeReviewUrl(movieId);
 
-        String videoUrl = makeVideoUrl(movieId);
-        String reviewUrl = makeReviewUrl(movieId);
-        new FetchVideoDetailsAsyncTask(this, videoListView).execute(videoUrl);
-        new FetchReviewDetailsAsyncTask(this, reviewListView).execute(reviewUrl);
+        getLoaderManager().initLoader(LOADER_VIDEO_ID, null, callbackVideo);
+        getLoaderManager().initLoader(LOADER_REVIEW_ID, null, callbackReview);
 
         favouriteDatabase = FavouriteDatabase.getsIntance(this);
 
@@ -163,5 +214,4 @@ public class MovieDetailsActivity extends AppCompatActivity {
         });
 
     }
-
 }

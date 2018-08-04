@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import uk.co.taniakolesnik.adn_popularmovies_part_2.R;
 import uk.co.taniakolesnik.adn_popularmovies_part_2.Review;
@@ -21,9 +22,9 @@ import uk.co.taniakolesnik.adn_popularmovies_part_2.Review;
 public class ReviewAdapter extends ArrayAdapter<Review> {
 
     Context context;
-    ArrayList<Review> reviews;
+    List<Review> reviews;
 
-    public ReviewAdapter(Context context, ArrayList<Review> reviews) {
+    public ReviewAdapter(Context context, List<Review> reviews) {
         super(context, 0, reviews);
         this.context = context;
         this.reviews = reviews;

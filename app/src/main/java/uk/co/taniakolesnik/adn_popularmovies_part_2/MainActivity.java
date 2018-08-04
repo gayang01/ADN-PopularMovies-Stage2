@@ -131,7 +131,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         viewModel.getFavourites().observe(this, new Observer<List<Movie>>() {
             @Override
             public void onChanged(@Nullable List<Movie> movies) {
-                Log.i("MainActivity", "setUpViewModel from LiveData");
                 adapter.updateAdapter(movies);
             }
         });

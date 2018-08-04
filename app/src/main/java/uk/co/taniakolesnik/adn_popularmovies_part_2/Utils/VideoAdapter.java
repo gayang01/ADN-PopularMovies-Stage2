@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import java.util.ArrayList;
+import java.util.List;
+
 import uk.co.taniakolesnik.adn_popularmovies_part_2.R;
 import uk.co.taniakolesnik.adn_popularmovies_part_2.Video;
 
@@ -22,9 +24,9 @@ public class VideoAdapter extends ArrayAdapter<Video> {
     private static final String VIDEO_URL_BASE = "https://www.youtube.com/watch?v=";
 
     Context context;
-    ArrayList<Video> videos;
+    List<Video> videos;
 
-    public VideoAdapter(Context context, ArrayList<Video> videos) {
+    public VideoAdapter(Context context, List<Video> videos) {
         super(context, 0, videos);
         this.context = context;
         this.videos = videos;
