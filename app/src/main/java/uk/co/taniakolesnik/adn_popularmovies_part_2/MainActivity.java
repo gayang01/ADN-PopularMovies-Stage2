@@ -1,8 +1,8 @@
 package uk.co.taniakolesnik.adn_popularmovies_part_2;
 
 import android.app.LoaderManager;
-import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.Observer;
+import android.arch.lifecycle.ViewModelProviders;
 import android.content.Loader;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -26,7 +26,8 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import uk.co.taniakolesnik.adn_popularmovies_part_2.Utils.AppExecutors;
+import uk.co.taniakolesnik.adn_popularmovies_part_2.Utils.FavouriteDatabase;
+import uk.co.taniakolesnik.adn_popularmovies_part_2.Utils.FavouritesViewModel;
 import uk.co.taniakolesnik.adn_popularmovies_part_2.Utils.MovieAsyncTaskLoader;
 import uk.co.taniakolesnik.adn_popularmovies_part_2.Utils.MovieRecyclerViewAdapter;
 
@@ -99,7 +100,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                 return true;
             case R.id.favourite_menu_item:
                 setTitle(getString(R.string.favouritesMovies_pageName));
-                loadFavourites();
+                setUpViewModel();
                 return true;
         }
         return super.onOptionsItemSelected(item);
@@ -125,12 +126,12 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     public void onLoaderReset(Loader<List<Movie>> loader) {
     }
 
-    private void loadFavourites(){
-        final LiveData<List<Movie>> favourites = favouriteDatabase.favouriteDao().selectAll();
-        favourites.observe(this, new Observer<List<Movie>>() {
+    private void setUpViewModel(){
+        FavouritesViewModel viewModel = ViewModelProviders.of(this).get(FavouritesViewModel.class);
+        viewModel.getFavourites().observe(this, new Observer<List<Movie>>() {
             @Override
             public void onChanged(@Nullable List<Movie> movies) {
-                Log.i("MainActivity", "loadFavourites from LiveData");
+                Log.i("MainActivity", "setUpViewModel from LiveData");
                 adapter.updateAdapter(movies);
             }
         });

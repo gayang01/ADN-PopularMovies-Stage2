@@ -18,6 +18,7 @@ import com.squareup.picasso.Picasso;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import uk.co.taniakolesnik.adn_popularmovies_part_2.Utils.AppExecutors;
+import uk.co.taniakolesnik.adn_popularmovies_part_2.Utils.FavouriteDatabase;
 import uk.co.taniakolesnik.adn_popularmovies_part_2.Utils.FetchReviewDetails;
 import uk.co.taniakolesnik.adn_popularmovies_part_2.Utils.FetchVideoDetails;
 
