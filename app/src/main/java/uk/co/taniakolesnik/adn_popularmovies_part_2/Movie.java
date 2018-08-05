@@ -10,7 +10,6 @@ import android.arch.persistence.room.PrimaryKey;
 @Entity(tableName = "favourites")
 public class Movie {
 
-    //title, release date, movie poster, vote average, and plot synopsis.
     @PrimaryKey(autoGenerate = true)
     private int _id;
     private String title;

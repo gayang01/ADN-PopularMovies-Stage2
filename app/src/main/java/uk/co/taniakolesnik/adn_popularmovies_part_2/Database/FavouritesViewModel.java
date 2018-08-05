@@ -4,10 +4,7 @@ import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;
 import android.arch.lifecycle.LiveData;
 import android.support.annotation.NonNull;
-import android.util.Log;
-
 import java.util.List;
-
 import uk.co.taniakolesnik.adn_popularmovies_part_2.Movie;
 
 /**

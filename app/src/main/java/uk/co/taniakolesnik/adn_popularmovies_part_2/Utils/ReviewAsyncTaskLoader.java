@@ -4,7 +4,6 @@ import android.content.AsyncTaskLoader;
 import android.content.Context;
 import java.util.ArrayList;
 import java.util.List;
-
 import uk.co.taniakolesnik.adn_popularmovies_part_2.Review;
 
 /**

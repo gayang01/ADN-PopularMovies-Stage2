@@ -1,5 +1,4 @@
 package uk.co.taniakolesnik.adn_popularmovies_part_2;
-import android.app.Activity;
 import android.app.LoaderManager;
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
@@ -14,13 +13,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-
-import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
-
-
 import java.util.List;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import uk.co.taniakolesnik.adn_popularmovies_part_2.Database.AppExecutors;
