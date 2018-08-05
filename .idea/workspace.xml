@@ -12,17 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f0bf084-6f48-463f-b297-e9e687d2420b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/classAnalysis.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/javaCompile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskHistory.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/MovieDetailsActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/MovieDetailsActivity.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -116,23 +106,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="823">
-              <caret line="196" column="5" lean-forward="false" selection-start-line="196" selection-start-column="5" selection-end-line="196" selection-end-column="5" />
+            <state relative-caret-position="148">
+              <caret line="35" column="48" lean-forward="false" selection-start-line="35" selection-start-column="48" selection-end-line="35" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2100#2143#0" expanded="true" />
-                <element signature="e#2464#2506#0" expanded="true" />
-                <element signature="e#2943#2982#0" expanded="true" />
-                <element signature="e#4682#4724#0" expanded="true" />
-                <element signature="e#4751#4793#0" expanded="true" />
-                <element signature="e#4941#4985#0" expanded="true" />
-                <element signature="e#5012#5055#0" expanded="true" />
-                <element signature="e#5199#5244#0" expanded="true" />
-                <marker date="1533501546000" expanded="true" signature="5655:5688" ph="&quot;No data returned!&quot;" />
-                <marker date="1533501546000" expanded="false" signature="6661:6688" ph="&quot;api_key&quot;" />
+                <element signature="e#2068#2111#0" expanded="true" />
+                <element signature="e#2432#2474#0" expanded="true" />
+                <element signature="e#2911#2950#0" expanded="true" />
+                <element signature="e#4650#4692#0" expanded="true" />
+                <element signature="e#4719#4761#0" expanded="true" />
+                <element signature="e#4909#4953#0" expanded="true" />
+                <element signature="e#4980#5023#0" expanded="true" />
+                <element signature="e#5167#5212#0" expanded="true" />
+                <marker date="1533502008000" expanded="true" signature="5623:5656" ph="&quot;No data returned!&quot;" />
+                <marker date="1533502008000" expanded="false" signature="6629:6656" ph="&quot;api_key&quot;" />
               </folding>
             </state>
           </provider>
@@ -150,7 +140,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MovieDetailsActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MovieDetailsActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/MovieDetailsActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="486">
@@ -2005,8 +1995,8 @@
         <option value="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/Database/FavouritesViewModel.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/Database/FavouriteDatabase.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/Database/FavouriteDao.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/MovieDetailsActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/MainActivity.java" />
       </list>
     </option>
   </component>
@@ -2265,7 +2255,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1533501877281" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1533502008285" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2313,7 +2303,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1533501877281" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1533502008285" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2475,7 +2465,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1533501877285" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1533502008287" />
       </method>
     </configuration>
     <list size="2">
@@ -2944,26 +2934,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="823">
-          <caret line="196" column="5" lean-forward="false" selection-start-line="196" selection-start-column="5" selection-end-line="196" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2100#2143#0" expanded="true" />
-            <element signature="e#2464#2506#0" expanded="true" />
-            <element signature="e#2943#2982#0" expanded="true" />
-            <element signature="e#4682#4724#0" expanded="true" />
-            <element signature="e#4751#4793#0" expanded="true" />
-            <element signature="e#4941#4985#0" expanded="true" />
-            <element signature="e#5012#5055#0" expanded="true" />
-            <element signature="e#5199#5244#0" expanded="true" />
-            <marker date="1533501546000" expanded="true" signature="5655:5688" ph="&quot;No data returned!&quot;" />
-            <marker date="1533501546000" expanded="false" signature="6661:6688" ph="&quot;api_key&quot;" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/MovieDetailsActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
@@ -2974,6 +2944,26 @@
             <marker date="1533501808000" expanded="true" signature="6664:6692" ph="&quot;/10&quot;" />
             <marker date="1533501808000" expanded="true" signature="7209:7236" ph="&quot;api_key&quot;" />
             <marker date="1533501808000" expanded="true" signature="7712:7739" ph="&quot;api_key&quot;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="35" column="48" lean-forward="false" selection-start-line="35" selection-start-column="48" selection-end-line="35" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2068#2111#0" expanded="true" />
+            <element signature="e#2432#2474#0" expanded="true" />
+            <element signature="e#2911#2950#0" expanded="true" />
+            <element signature="e#4650#4692#0" expanded="true" />
+            <element signature="e#4719#4761#0" expanded="true" />
+            <element signature="e#4909#4953#0" expanded="true" />
+            <element signature="e#4980#5023#0" expanded="true" />
+            <element signature="e#5167#5212#0" expanded="true" />
+            <marker date="1533502008000" expanded="true" signature="5623:5656" ph="&quot;No data returned!&quot;" />
+            <marker date="1533502008000" expanded="false" signature="6629:6656" ph="&quot;api_key&quot;" />
           </folding>
         </state>
       </provider>
