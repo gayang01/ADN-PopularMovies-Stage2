@@ -6,12 +6,12 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="FavouritesViewModel" />
     <option name="TOOL_WINDOW_LOG_LEVEL" value="info" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f0bf084-6f48-463f-b297-e9e687d2420b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/Utils/FetchVideoDetailsAsyncTask.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/classAnalysis.bin" />
@@ -21,11 +21,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/Database/FavouritesViewModel.java" afterPath="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/Database/FavouritesViewModel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/MovieDetailsActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/MovieDetailsActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/Utils/FetchReviewDetailsAsyncTask.java" afterPath="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/Utils/FetchReviewDetailsAsyncTask.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/Utils/ReviewAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/Utils/ReviewAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/Utils/VideoAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/Utils/VideoAdapter.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -119,31 +116,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MovieDetailsActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MovieDetailsActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/MovieDetailsActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="37" column="0" lean-forward="true" selection-start-line="36" selection-start-column="100" selection-end-line="37" selection-end-column="0" />
+            <state relative-caret-position="199">
+              <caret line="77" column="79" lean-forward="false" selection-start-line="77" selection-start-column="79" selection-end-line="77" selection-end-column="79" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#4164#4202#0" expanded="true" />
-                <element signature="e#4256#4300#0" expanded="true" />
-                <element signature="e#4341#4378#0" expanded="true" />
-                <element signature="e#4430#4465#0" expanded="true" />
-                <element signature="e#4514#4551#0" expanded="true" />
-                <element signature="e#4599#4637#0" expanded="true" />
-                <element signature="e#5389#5741#0" expanded="true" />
-                <element signature="e#5740#5741#0" expanded="true" />
-                <element signature="e#5788#6090#0" expanded="true" />
-                <element signature="e#6089#6090#0" expanded="true" />
-                <element signature="e#8078#8247#0" expanded="true" />
-                <element signature="e#8246#8247#0" expanded="true" />
-                <element signature="e#8387#8549#0" expanded="true" />
-                <element signature="e#8548#8549#0" expanded="true" />
-                <marker date="1533425858000" expanded="true" signature="6093:6099" ph="{...}" />
-                <marker date="1533425858000" expanded="true" signature="6775:6803" ph="&quot;/10&quot;" />
-                <marker date="1533425858000" expanded="true" signature="7320:7347" ph="&quot;api_key&quot;" />
-                <marker date="1533425858000" expanded="true" signature="7823:7850" ph="&quot;api_key&quot;" />
+                <element signature="e#4093#4131#0" expanded="true" />
+                <element signature="e#4185#4229#0" expanded="true" />
+                <element signature="e#4270#4307#0" expanded="true" />
+                <element signature="e#4359#4394#0" expanded="true" />
+                <element signature="e#4443#4480#0" expanded="true" />
+                <element signature="e#4528#4566#0" expanded="true" />
+                <element signature="e#5318#5670#0" expanded="true" />
+                <element signature="e#5669#5670#0" expanded="true" />
+                <element signature="e#5717#6019#0" expanded="true" />
+                <element signature="e#6018#6019#0" expanded="true" />
+                <element signature="e#8007#8176#0" expanded="true" />
+                <element signature="e#8175#8176#0" expanded="true" />
+                <element signature="e#8316#8478#0" expanded="true" />
+                <element signature="e#8477#8478#0" expanded="true" />
+                <marker date="1533426624000" expanded="true" signature="6022:6028" ph="{...}" />
+                <marker date="1533426624000" expanded="true" signature="6704:6732" ph="&quot;/10&quot;" />
+                <marker date="1533426624000" expanded="true" signature="7249:7276" ph="&quot;api_key&quot;" />
+                <marker date="1533426624000" expanded="true" signature="7752:7779" ph="&quot;api_key&quot;" />
               </folding>
             </state>
           </provider>
@@ -153,17 +150,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/Utils/ReviewAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
-              <caret line="33" column="33" lean-forward="true" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FetchReviewDetailsAsyncTask.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/Utils/FetchReviewDetailsAsyncTask.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="26" column="75" lean-forward="false" selection-start-line="26" selection-start-column="75" selection-end-line="26" selection-end-column="75" />
+              <caret line="33" column="33" lean-forward="false" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -184,14 +171,14 @@
       <file leaf-file-name="VideoAsyncTaskLoader.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/Utils/VideoAsyncTaskLoader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="15" column="70" lean-forward="true" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="70" />
+            <state relative-caret-position="195">
+              <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#767#768#0" expanded="true" />
-                <element signature="e#794#795#0" expanded="true" />
-                <element signature="e#846#847#0" expanded="true" />
-                <element signature="e#874#875#0" expanded="true" />
+                <element signature="e#734#735#0" expanded="true" />
+                <element signature="e#761#762#0" expanded="true" />
+                <element signature="e#813#814#0" expanded="true" />
+                <element signature="e#841#842#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -200,14 +187,14 @@
       <file leaf-file-name="ReviewAsyncTaskLoader.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/Utils/ReviewAsyncTaskLoader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="18" column="7" lean-forward="false" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="20" />
+            <state relative-caret-position="195">
+              <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#801#802#0" expanded="true" />
-                <element signature="e#828#829#0" expanded="true" />
-                <element signature="e#880#881#0" expanded="true" />
-                <element signature="e#908#909#0" expanded="true" />
+                <element signature="e#742#743#0" expanded="true" />
+                <element signature="e#769#770#0" expanded="true" />
+                <element signature="e#821#822#0" expanded="true" />
+                <element signature="e#849#850#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -228,19 +215,34 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="37" column="4" lean-forward="true" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="43" />
+            <state relative-caret-position="-158">
+              <caret line="131" column="19" lean-forward="false" selection-start-line="131" selection-start-column="19" selection-end-line="131" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#4886#5074#0" expanded="true" />
-                <element signature="e#5073#5074#0" expanded="true" />
-                <marker date="1533420743000" expanded="false" signature="3371:3413" ph="&quot;popular&quot;" />
-                <marker date="1533420743000" expanded="false" signature="3440:3482" ph="&quot;Popular Movies&quot;" />
-                <marker date="1533420743000" expanded="false" signature="3658:3702" ph="&quot;top_rated&quot;" />
-                <marker date="1533420743000" expanded="false" signature="3729:3772" ph="&quot;Top Rated Movies&quot;" />
-                <marker date="1533420743000" expanded="false" signature="3945:3990" ph="&quot;Favourites Movies&quot;" />
-                <marker date="1533420743000" expanded="false" signature="4457:4490" ph="&quot;No data returned!&quot;" />
-                <marker date="1533420743000" expanded="false" signature="5410:5437" ph="&quot;api_key&quot;" />
+                <element signature="e#2673#2715#0" expanded="true" />
+                <element signature="e#4504#4546#0" expanded="true" />
+                <element signature="e#4573#4615#0" expanded="true" />
+                <element signature="e#4763#4807#0" expanded="true" />
+                <element signature="e#4834#4877#0" expanded="true" />
+                <element signature="e#5021#5066#0" expanded="true" />
+                <element signature="e#5906#6094#0" expanded="true" />
+                <element signature="e#6093#6094#0" expanded="true" />
+                <marker date="1533429505000" expanded="false" signature="5477:5510" ph="&quot;No data returned!&quot;" />
+                <marker date="1533429505000" expanded="false" signature="6430:6457" ph="&quot;api_key&quot;" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FavouritesViewModel.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/Database/FavouritesViewModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="58" lean-forward="false" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="58" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#880#881#0" expanded="true" />
+                <element signature="e#913#914#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -290,7 +292,6 @@
       <find>base</find>
       <find>IMAGE_URL_BASE</find>
       <find>listview</find>
-      <find>video</find>
       <find>videoAd</find>
       <find>setListViewHeightBasedOnItems</find>
       <find>fetchReviewInfo</find>
@@ -302,6 +303,7 @@
       <find>loadFavourites</find>
       <find>fav</find>
       <find>setFavouriteButtonColor</find>
+      <find>video</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -2062,18 +2064,18 @@
         <option value="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/FavouritesViewModel.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/Database/FavouriteDatabase.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/Database/FavouriteDao.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/Database/FavouritesViewModel.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/Database/AppExecutors.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/Database/CheckIfFavouriteFactory.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/Database/CheckIfFavouriteViewModel.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/Utils/FetchReviewDetailsAsyncTask.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/Utils/MovieAsyncTaskLoader.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/MainActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/Utils/VideoAsyncTaskLoader.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/Utils/VideoAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/Utils/ReviewAsyncTaskLoader.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/Utils/ReviewAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/Utils/VideoAsyncTaskLoader.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/Utils/ReviewAsyncTaskLoader.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/MovieDetailsActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/Database/FavouritesViewModel.java" />
       </list>
     </option>
   </component>
@@ -2235,6 +2237,7 @@
     <property name="format" value="PNG" />
     <property name="VectorAssetImportPath" value="$USER_HOME$/Downloads" />
     <property name="android.profiler.active" value="true" />
+    <property name="extract.method.default.visibility" value="public" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -2352,7 +2355,7 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1533426304006" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1533429693521" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2399,7 +2402,7 @@
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />
       </Profilers>
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1533426304007" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1533429693522" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2761,6 +2764,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2789,6 +2793,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2826,6 +2831,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="35" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2833,6 +2839,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="21" column="22" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2933,18 +2940,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/Database/FavouritesViewModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#950#951#0" expanded="true" />
-            <element signature="e#983#984#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/Database/AppExecutors.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -2999,16 +2994,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/Utils/VideoAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="35" column="25" lean-forward="false" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/Utils/MovieRecyclerViewAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
@@ -3035,49 +3020,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/Utils/VideoAsyncTaskLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="15" column="70" lean-forward="true" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="70" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#767#768#0" expanded="true" />
-            <element signature="e#794#795#0" expanded="true" />
-            <element signature="e#846#847#0" expanded="true" />
-            <element signature="e#874#875#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/Utils/ReviewAsyncTaskLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="18" column="7" lean-forward="false" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="20" />
+        <state relative-caret-position="195">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#801#802#0" expanded="true" />
-            <element signature="e#828#829#0" expanded="true" />
-            <element signature="e#880#881#0" expanded="true" />
-            <element signature="e#908#909#0" expanded="true" />
+            <element signature="e#742#743#0" expanded="true" />
+            <element signature="e#769#770#0" expanded="true" />
+            <element signature="e#821#822#0" expanded="true" />
+            <element signature="e#849#850#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/Utils/VideoAsyncTaskLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="37" column="4" lean-forward="true" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="43" />
+        <state relative-caret-position="195">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4886#5074#0" expanded="true" />
-            <element signature="e#5073#5074#0" expanded="true" />
-            <marker date="1533420743000" expanded="false" signature="3371:3413" ph="&quot;popular&quot;" />
-            <marker date="1533420743000" expanded="false" signature="3440:3482" ph="&quot;Popular Movies&quot;" />
-            <marker date="1533420743000" expanded="false" signature="3658:3702" ph="&quot;top_rated&quot;" />
-            <marker date="1533420743000" expanded="false" signature="3729:3772" ph="&quot;Top Rated Movies&quot;" />
-            <marker date="1533420743000" expanded="false" signature="3945:3990" ph="&quot;Favourites Movies&quot;" />
-            <marker date="1533420743000" expanded="false" signature="4457:4490" ph="&quot;No data returned!&quot;" />
-            <marker date="1533420743000" expanded="false" signature="5410:5437" ph="&quot;api_key&quot;" />
+            <element signature="e#734#735#0" expanded="true" />
+            <element signature="e#761#762#0" expanded="true" />
+            <element signature="e#813#814#0" expanded="true" />
+            <element signature="e#841#842#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/Utils/VideoAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="35" column="25" lean-forward="false" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3085,35 +3061,67 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/Utils/ReviewAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
-          <caret line="33" column="33" lean-forward="true" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
+          <caret line="33" column="33" lean-forward="false" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/MovieDetailsActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="37" column="0" lean-forward="true" selection-start-line="36" selection-start-column="100" selection-end-line="37" selection-end-column="0" />
+        <state relative-caret-position="199">
+          <caret line="77" column="79" lean-forward="false" selection-start-line="77" selection-start-column="79" selection-end-line="77" selection-end-column="79" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4164#4202#0" expanded="true" />
-            <element signature="e#4256#4300#0" expanded="true" />
-            <element signature="e#4341#4378#0" expanded="true" />
-            <element signature="e#4430#4465#0" expanded="true" />
-            <element signature="e#4514#4551#0" expanded="true" />
-            <element signature="e#4599#4637#0" expanded="true" />
-            <element signature="e#5389#5741#0" expanded="true" />
-            <element signature="e#5740#5741#0" expanded="true" />
-            <element signature="e#5788#6090#0" expanded="true" />
-            <element signature="e#6089#6090#0" expanded="true" />
-            <element signature="e#8078#8247#0" expanded="true" />
-            <element signature="e#8246#8247#0" expanded="true" />
-            <element signature="e#8387#8549#0" expanded="true" />
-            <element signature="e#8548#8549#0" expanded="true" />
-            <marker date="1533425858000" expanded="true" signature="6093:6099" ph="{...}" />
-            <marker date="1533425858000" expanded="true" signature="6775:6803" ph="&quot;/10&quot;" />
-            <marker date="1533425858000" expanded="true" signature="7320:7347" ph="&quot;api_key&quot;" />
-            <marker date="1533425858000" expanded="true" signature="7823:7850" ph="&quot;api_key&quot;" />
+            <element signature="e#4093#4131#0" expanded="true" />
+            <element signature="e#4185#4229#0" expanded="true" />
+            <element signature="e#4270#4307#0" expanded="true" />
+            <element signature="e#4359#4394#0" expanded="true" />
+            <element signature="e#4443#4480#0" expanded="true" />
+            <element signature="e#4528#4566#0" expanded="true" />
+            <element signature="e#5318#5670#0" expanded="true" />
+            <element signature="e#5669#5670#0" expanded="true" />
+            <element signature="e#5717#6019#0" expanded="true" />
+            <element signature="e#6018#6019#0" expanded="true" />
+            <element signature="e#8007#8176#0" expanded="true" />
+            <element signature="e#8175#8176#0" expanded="true" />
+            <element signature="e#8316#8478#0" expanded="true" />
+            <element signature="e#8477#8478#0" expanded="true" />
+            <marker date="1533426624000" expanded="true" signature="6022:6028" ph="{...}" />
+            <marker date="1533426624000" expanded="true" signature="6704:6732" ph="&quot;/10&quot;" />
+            <marker date="1533426624000" expanded="true" signature="7249:7276" ph="&quot;api_key&quot;" />
+            <marker date="1533426624000" expanded="true" signature="7752:7779" ph="&quot;api_key&quot;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-158">
+          <caret line="131" column="19" lean-forward="false" selection-start-line="131" selection-start-column="19" selection-end-line="131" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2673#2715#0" expanded="true" />
+            <element signature="e#4504#4546#0" expanded="true" />
+            <element signature="e#4573#4615#0" expanded="true" />
+            <element signature="e#4763#4807#0" expanded="true" />
+            <element signature="e#4834#4877#0" expanded="true" />
+            <element signature="e#5021#5066#0" expanded="true" />
+            <element signature="e#5906#6094#0" expanded="true" />
+            <element signature="e#6093#6094#0" expanded="true" />
+            <marker date="1533429505000" expanded="false" signature="5477:5510" ph="&quot;No data returned!&quot;" />
+            <marker date="1533429505000" expanded="false" signature="6430:6457" ph="&quot;api_key&quot;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/Database/FavouritesViewModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="58" lean-forward="false" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#880#881#0" expanded="true" />
+            <element signature="e#913#914#0" expanded="true" />
           </folding>
         </state>
       </provider>

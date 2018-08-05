@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
     //please insert your API key here
     public static final String API_KEY_VALUE = "89d4514e84a96bd998784f6768769127";
+    private static final String PREFERENCE_KEY = "preference";
     private static final int LOADER_ID = 1;
     MovieRecyclerViewAdapter adapter;
     @BindView(R.id.recyclerView)
@@ -43,8 +44,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     TextView emptyTextView;
     @BindView(R.id.progressBar)
     ProgressBar progressBarView;
-    private String preference;
-    private FavouriteDatabase favouriteDatabase;
+    private String preference ;
+    int menuItemId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,12 +53,21 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
+        Log.i("MainActivity", "onCreate preference " + preference);
+
         if (TextUtils.isEmpty(API_KEY_VALUE)){
            showErrorMessage(getString(R.string.no_api_key_error_pop_up));
            return;
         }
 
-        if (preference == null) {
+        if (savedInstanceState != null){
+            if (savedInstanceState.containsKey(PREFERENCE_KEY)){
+                menuItemId = savedInstanceState.getInt(PREFERENCE_KEY);
+                Log.i("MainActivity", "onCreate menuItemId is " + menuItemId);
+                setPageAsPerSortSelected(menuItemId);
+            }
+        } else {
+            Log.i("MainActivity", "onCreate preference is null");
             preference = getString(R.string.linkPreference_popular);
         }
 
@@ -73,8 +83,13 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         recyclerListView.setLayoutManager(new GridLayoutManager(this, 2));
         recyclerListView.setAdapter(adapter);
 
-        favouriteDatabase = FavouriteDatabase.getsIntance(this);
+    }
 
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        Log.i("MainActivity", "onSaveInstanceState id " + menuItemId);
+        outState.putInt(PREFERENCE_KEY, menuItemId);
     }
 
     @Override
@@ -89,21 +104,36 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         int id = item.getItemId();
         switch (id) {
             case R.id.popular_menu_item:
+                menuItemId = 0;
+                break;
+            case R.id.topRated_menu_item:
+                menuItemId = 1;
+                break;
+            case R.id.favourite_menu_item:
+                menuItemId = 2;
+                break;
+        }
+        setPageAsPerSortSelected(menuItemId);
+        return super.onOptionsItemSelected(item);
+    }
+
+    private void setPageAsPerSortSelected(int menuItemId) {
+        switch (menuItemId) {
+            case 0:
                 preference = getString(R.string.linkPreference_popular);
                 setTitle(getString(R.string.popularMovies_pageName));
                 getLoaderManager().restartLoader(LOADER_ID, null, this);
-                return true;
-            case R.id.topRated_menu_item:
+                break;
+            case 1:
                 preference = getString(R.string.linkPreference_top_rated);
                 setTitle(getString(R.string.topRatedMovies_pageName));
                 getLoaderManager().restartLoader(LOADER_ID, null, this);
-                return true;
-            case R.id.favourite_menu_item:
+                break;
+            case 2:
                 setTitle(getString(R.string.favouritesMovies_pageName));
                 setUpViewModel();
-                return true;
+                break;
         }
-        return super.onOptionsItemSelected(item);
     }
 
     @Override
@@ -118,7 +148,9 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
             showErrorMessage(getString(R.string.no_date_error));
         } else {
             progressBarView.setVisibility(View.GONE);
-            adapter.updateAdapter(data);
+            if (menuItemId != 2) {
+                adapter.updateAdapter(data);
+            }
         }
     }
 

@@ -8,7 +8,6 @@ import android.util.Log;
 
 import java.util.List;
 
-import uk.co.taniakolesnik.adn_popularmovies_part_2.Database.FavouriteDatabase;
 import uk.co.taniakolesnik.adn_popularmovies_part_2.Movie;
 
 /**
@@ -21,7 +20,6 @@ public class FavouritesViewModel  extends AndroidViewModel {
 
     public FavouritesViewModel(@NonNull Application application) {
         super(application);
-        Log.i("FavouritesViewModel", "loadFavourites from LiveData");
         FavouriteDatabase database = FavouriteDatabase.getsIntance(this.getApplication());
         favourites = database.favouriteDao().selectAll();
     }
