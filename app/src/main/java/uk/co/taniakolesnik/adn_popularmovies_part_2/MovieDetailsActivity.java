@@ -9,6 +9,7 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -100,6 +101,7 @@ public class MovieDetailsActivity extends AppCompatActivity{
         String plot = intent.getStringExtra(getString(R.string.movie_plot_bundle));
         String image = intent.getStringExtra(getString(R.string.movie_image_bundle));
         setMovieDetails(title, releaseDate, vote, plot, image);
+
 
         final Movie favourite = new Movie(title, releaseDate,image, vote, plot, movieId);
         videoUrl = makeVideoUrl(movieId);
@@ -207,5 +209,16 @@ public class MovieDetailsActivity extends AppCompatActivity{
             }
         });
 
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }

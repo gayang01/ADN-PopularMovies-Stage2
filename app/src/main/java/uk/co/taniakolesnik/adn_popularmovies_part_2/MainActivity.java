@@ -30,8 +30,10 @@ import uk.co.taniakolesnik.adn_popularmovies_part_2.Utils.MovieRecyclerViewAdapt
 
 public class MainActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<List<Movie>> {
 
+    private static final String TAG = MainActivity.class.getSimpleName();
+
     //please insert your API key here
-    public static final String API_KEY_VALUE = "";
+    public static final String API_KEY_VALUE = "89d4514e84a96bd998784f6768769127";
     private static final String PREFERENCE_KEY = "preference";
     private static final int LOADER_ID = 1;
     MovieRecyclerViewAdapter adapter;
@@ -42,15 +44,17 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     @BindView(R.id.progressBar)
     ProgressBar progressBarView;
     private String preference ;
-    int menuItemId;
+
+
+    private int menuItemId;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-
-        Log.i("MainActivity", "onCreate preference " + preference);
 
         if (TextUtils.isEmpty(API_KEY_VALUE)){
            showErrorMessage(getString(R.string.no_api_key_error_pop_up));
@@ -60,13 +64,13 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         if (savedInstanceState != null){
             if (savedInstanceState.containsKey(PREFERENCE_KEY)){
                 menuItemId = savedInstanceState.getInt(PREFERENCE_KEY);
-                Log.i("MainActivity", "onCreate menuItemId is " + menuItemId);
                 setPageAsPerSortSelected(menuItemId);
             }
         } else {
-            Log.i("MainActivity", "onCreate preference is null");
             preference = getString(R.string.linkPreference_popular);
         }
+
+        Log.i(TAG, "onCreate menuItemId " + menuItemId);
 
         ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
@@ -85,8 +89,17 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        Log.i("MainActivity", "onSaveInstanceState id " + menuItemId);
         outState.putInt(PREFERENCE_KEY, menuItemId);
+        Log.i(TAG, "onSaveInstanceState menuItemId " + menuItemId);
+
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        menuItemId = savedInstanceState.getInt(PREFERENCE_KEY);
+        setPageAsPerSortSelected(menuItemId);
+        Log.i(TAG, "onRestoreInstanceState menuItemId " + menuItemId);
     }
 
     @Override
