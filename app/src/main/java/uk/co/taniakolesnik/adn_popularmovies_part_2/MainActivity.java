@@ -7,6 +7,7 @@ import android.content.Loader;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
+import android.os.Parcelable;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -36,6 +37,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     //please insert your API key here
     public static final String API_KEY_VALUE = BuildConfig.THEMOVIDEDB_API_KEY;
     private static final String PREFERENCE_KEY = "preference";
+    private static final String LIST_KEY = "list";
+    private static final String SCROLL_KEY = "scroll";
     private static final int LOADER_ID = 1;
     MovieRecyclerViewAdapter adapter;
     @BindView(R.id.recyclerView)
@@ -44,11 +47,10 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     TextView emptyTextView;
     @BindView(R.id.progressBar)
     ProgressBar progressBarView;
-    private String preference ;
-
-
+    private String preference;
     private int menuItemId;
-
+    private int scrollPositionId = -1;
+    Parcelable mListState;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,14 +84,19 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         adapter = new MovieRecyclerViewAdapter(this, new ArrayList<Movie>());
         recyclerListView.setLayoutManager(new GridLayoutManager(this, ListViewHelper.calculateNumbeOfColumns(getApplicationContext())));
         recyclerListView.setAdapter(adapter);
+        recyclerListView.scrollToPosition(scrollPositionId);
 
     }
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
+        int scrollPosition = ((GridLayoutManager) recyclerListView.getLayoutManager())
+                .findFirstCompletelyVisibleItemPosition();
+        mListState = recyclerListView.getLayoutManager().onSaveInstanceState();
+        outState.putParcelable(LIST_KEY, mListState);
+        outState.putInt(SCROLL_KEY, scrollPosition);
         outState.putInt(PREFERENCE_KEY, menuItemId);
-        Log.i(TAG, "onSaveInstanceState menuItemId " + menuItemId);
 
     }
 
@@ -98,7 +105,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         super.onRestoreInstanceState(savedInstanceState);
         menuItemId = savedInstanceState.getInt(PREFERENCE_KEY);
         setPageAsPerSortSelected(menuItemId);
-        Log.i(TAG, "onRestoreInstanceState menuItemId " + menuItemId);
+        mListState = savedInstanceState.getParcelable(LIST_KEY);
+        scrollPositionId = savedInstanceState.getInt(SCROLL_KEY);
     }
 
     @Override
