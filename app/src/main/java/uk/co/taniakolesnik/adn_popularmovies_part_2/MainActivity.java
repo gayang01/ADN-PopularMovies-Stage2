@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     private static final String TAG = MainActivity.class.getSimpleName();
 
     //please insert your API key here
-    public static final String API_KEY_VALUE = "";
+    public static final String API_KEY_VALUE = BuildConfig.THEMOVIDEDB_API_KEY;
     private static final String PREFERENCE_KEY = "preference";
     private static final int LOADER_ID = 1;
     MovieRecyclerViewAdapter adapter;
