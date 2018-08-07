@@ -2,13 +2,20 @@ package uk.co.taniakolesnik.adn_popularmovies_part_2.Utils;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.net.Uri;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import java.util.List;
+
+import uk.co.taniakolesnik.adn_popularmovies_part_2.MainActivity;
 import uk.co.taniakolesnik.adn_popularmovies_part_2.R;
 import uk.co.taniakolesnik.adn_popularmovies_part_2.Video;
 
@@ -43,8 +50,15 @@ public class VideoAdapter extends ArrayAdapter<Video> {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse(videoUrl));
-                context.startActivity(intent);
+                PackageManager packageManager = context.getPackageManager();
+                List<ResolveInfo> resolveInfo = packageManager.queryIntentActivities(intent, 0);
+                if (resolveInfo.size() > 0) {
+                    intent.setData(Uri.parse(videoUrl));
+                    context.startActivity(intent);
+                } else {
+                    Toast.makeText(getContext(), getContext().getString(R.string.no_application_to_play_video),
+                            Toast.LENGTH_LONG).show();
+                }
             }
         });
         return convertView;

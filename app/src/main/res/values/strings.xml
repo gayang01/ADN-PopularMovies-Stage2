@@ -32,6 +32,7 @@
     <string name="movie_bundle" translatable="false">movie</string>
 
     <string name="no_connection_error">No internet connection!</string>
+    <string name="no_application_to_play_video">No application to play video.</string>
     <string name="no_date_error">No data returned!</string>
     <string name="no_favourites_error">No favourites added</string>
     <string name="no_api_key_error_pop_up">No API key set in MainActivity!</string>

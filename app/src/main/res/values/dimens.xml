@@ -8,4 +8,6 @@
     <dimen name="large_textSize">32sp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="movie_title_height">150dp</dimen>
+    <dimen name="review_max_lines">4</dimen>
+    <dimen name="trailer_name_max_lines">1</dimen>
 </resources>
