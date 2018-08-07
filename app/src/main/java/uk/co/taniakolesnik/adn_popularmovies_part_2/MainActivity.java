@@ -49,7 +49,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     ProgressBar progressBarView;
     private String preference;
     private int menuItemId;
-    private int scrollPositionId = -1;
     Parcelable mListState;
 
     @Override
@@ -84,18 +83,15 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         adapter = new MovieRecyclerViewAdapter(this, new ArrayList<Movie>());
         recyclerListView.setLayoutManager(new GridLayoutManager(this, ListViewHelper.calculateNumbeOfColumns(getApplicationContext())));
         recyclerListView.setAdapter(adapter);
-        recyclerListView.scrollToPosition(scrollPositionId);
+        recyclerListView.getLayoutManager().onRestoreInstanceState(mListState);
 
     }
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        int scrollPosition = ((GridLayoutManager) recyclerListView.getLayoutManager())
-                .findFirstCompletelyVisibleItemPosition();
         mListState = recyclerListView.getLayoutManager().onSaveInstanceState();
         outState.putParcelable(LIST_KEY, mListState);
-        outState.putInt(SCROLL_KEY, scrollPosition);
         outState.putInt(PREFERENCE_KEY, menuItemId);
 
     }
@@ -106,7 +102,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         menuItemId = savedInstanceState.getInt(PREFERENCE_KEY);
         setPageAsPerSortSelected(menuItemId);
         mListState = savedInstanceState.getParcelable(LIST_KEY);
-        scrollPositionId = savedInstanceState.getInt(SCROLL_KEY);
     }
 
     @Override
