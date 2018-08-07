@@ -25,6 +25,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import uk.co.taniakolesnik.adn_popularmovies_part_2.Database.FavouritesViewModel;
+import uk.co.taniakolesnik.adn_popularmovies_part_2.Utils.ListViewHelper;
 import uk.co.taniakolesnik.adn_popularmovies_part_2.Utils.MovieAsyncTaskLoader;
 import uk.co.taniakolesnik.adn_popularmovies_part_2.Utils.MovieRecyclerViewAdapter;
 
@@ -81,7 +82,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         }
 
         adapter = new MovieRecyclerViewAdapter(this, new ArrayList<Movie>());
-        recyclerListView.setLayoutManager(new GridLayoutManager(this, 2));
+        recyclerListView.setLayoutManager(new GridLayoutManager(this, ListViewHelper.calculateNumbeOfColumns(getApplicationContext())));
         recyclerListView.setAdapter(adapter);
 
     }

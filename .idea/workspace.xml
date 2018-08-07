@@ -21,8 +21,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/Utils/ListViewHelper.java" afterPath="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/Utils/ListViewHelper.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -119,21 +119,21 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="35" column="78" lean-forward="false" selection-start-line="35" selection-start-column="78" selection-end-line="35" selection-end-column="78" />
+            <state relative-caret-position="464">
+              <caret line="95" column="5" lean-forward="false" selection-start-line="95" selection-start-column="5" selection-end-line="95" selection-end-column="5" />
               <folding>
-                <element signature="e#2097#2140#0" expanded="true" />
-                <element signature="e#2461#2503#0" expanded="true" />
-                <element signature="e#2940#2979#0" expanded="true" />
-                <element signature="e#4679#4721#0" expanded="true" />
-                <element signature="e#4748#4790#0" expanded="true" />
-                <element signature="e#4938#4982#0" expanded="true" />
-                <element signature="e#5009#5052#0" expanded="true" />
-                <element signature="e#5196#5241#0" expanded="true" />
-                <element signature="e#5652#5685#0" expanded="true" />
-                <element signature="e#6658#6685#0" expanded="true" />
-                <marker date="1533642904000" expanded="false" signature="6249:6268" ph=" { " />
-                <marker date="1533642904000" expanded="false" signature="6298:6312" ph=" }" />
+                <element signature="e#2171#2214#0" expanded="true" />
+                <element signature="e#2535#2577#0" expanded="true" />
+                <element signature="e#3014#3053#0" expanded="true" />
+                <element signature="e#4815#4857#0" expanded="true" />
+                <element signature="e#4884#4926#0" expanded="true" />
+                <element signature="e#5074#5118#0" expanded="true" />
+                <element signature="e#5145#5188#0" expanded="true" />
+                <element signature="e#5332#5377#0" expanded="true" />
+                <element signature="e#5788#5821#0" expanded="true" />
+                <element signature="e#6794#6821#0" expanded="true" />
+                <marker date="1533643196000" expanded="false" signature="6385:6404" ph=" { " />
+                <marker date="1533643196000" expanded="false" signature="6434:6448" ph=" }" />
               </folding>
             </state>
           </provider>
@@ -176,8 +176,8 @@
       <file leaf-file-name="ListViewHelper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/Utils/ListViewHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            <state relative-caret-position="470">
+              <caret line="48" column="45" lean-forward="false" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -2071,7 +2071,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/Video.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/list_footer.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/video_list.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/Utils/ListViewHelper.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/main_menu.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/Utils/FetchReviewDetails.java" />
@@ -2107,6 +2106,7 @@
         <option value="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/Database/FavouriteDao.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/MovieDetailsActivity.java" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/Utils/ListViewHelper.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/MainActivity.java" />
       </list>
     </option>
@@ -2191,6 +2191,28 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="adn_popularmovies_part_2" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ADN-PopularMovies-Stage2" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="adn_popularmovies_part_2" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Utils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -2357,7 +2379,7 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1533642943844" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1533643212881" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2404,7 +2426,7 @@
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />
       </Profilers>
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1533642943845" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1533643212882" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2436,6 +2458,27 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
       <method />
     </configuration>
     <configuration default="true" type="JarApplication" factoryName="JAR Application">
@@ -2565,7 +2608,7 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1533642943865" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1533643212892" />
       </method>
     </configuration>
     <list size="2">
@@ -2914,14 +2957,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/Utils/ListViewHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/Database/FavouritesViewModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -3097,23 +3132,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/Utils/ListViewHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="470">
+          <caret line="48" column="45" lean-forward="false" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/uk/co/taniakolesnik/adn_popularmovies_part_2/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="35" column="78" lean-forward="false" selection-start-line="35" selection-start-column="78" selection-end-line="35" selection-end-column="78" />
+        <state relative-caret-position="464">
+          <caret line="95" column="5" lean-forward="false" selection-start-line="95" selection-start-column="5" selection-end-line="95" selection-end-column="5" />
           <folding>
-            <element signature="e#2097#2140#0" expanded="true" />
-            <element signature="e#2461#2503#0" expanded="true" />
-            <element signature="e#2940#2979#0" expanded="true" />
-            <element signature="e#4679#4721#0" expanded="true" />
-            <element signature="e#4748#4790#0" expanded="true" />
-            <element signature="e#4938#4982#0" expanded="true" />
-            <element signature="e#5009#5052#0" expanded="true" />
-            <element signature="e#5196#5241#0" expanded="true" />
-            <element signature="e#5652#5685#0" expanded="true" />
-            <element signature="e#6658#6685#0" expanded="true" />
-            <marker date="1533642904000" expanded="false" signature="6249:6268" ph=" { " />
-            <marker date="1533642904000" expanded="false" signature="6298:6312" ph=" }" />
+            <element signature="e#2171#2214#0" expanded="true" />
+            <element signature="e#2535#2577#0" expanded="true" />
+            <element signature="e#3014#3053#0" expanded="true" />
+            <element signature="e#4815#4857#0" expanded="true" />
+            <element signature="e#4884#4926#0" expanded="true" />
+            <element signature="e#5074#5118#0" expanded="true" />
+            <element signature="e#5145#5188#0" expanded="true" />
+            <element signature="e#5332#5377#0" expanded="true" />
+            <element signature="e#5788#5821#0" expanded="true" />
+            <element signature="e#6794#6821#0" expanded="true" />
+            <marker date="1533643196000" expanded="false" signature="6385:6404" ph=" { " />
+            <marker date="1533643196000" expanded="false" signature="6434:6448" ph=" }" />
           </folding>
         </state>
       </provider>

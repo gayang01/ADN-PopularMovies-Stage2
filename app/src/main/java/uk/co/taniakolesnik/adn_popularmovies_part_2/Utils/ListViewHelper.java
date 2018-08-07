@@ -1,5 +1,7 @@
 package uk.co.taniakolesnik.adn_popularmovies_part_2.Utils;
 
+import android.content.Context;
+import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListAdapter;
@@ -42,6 +44,13 @@ public class ListViewHelper {
             return false;
         }
 
+    }
+    //https://stackoverflow.com/questions/33575731/gridlayoutmanager-how-to-auto-fit-columns
+    public static int calculateNumbeOfColumns(Context context) {
+        DisplayMetrics displayMetrics = context.getResources().getDisplayMetrics();
+        float widthDp = displayMetrics.widthPixels / displayMetrics.density;
+        int noOfColumns = (int) (widthDp / 180);
+        return noOfColumns;
     }
 }
 
