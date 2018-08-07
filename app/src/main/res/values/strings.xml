@@ -29,6 +29,8 @@
     <string name="movie_id_bundle" translatable="false">movieId</string>
     <string name="duration_bundle" translatable="false">duration</string>
 
+    <string name="movie_bundle" translatable="false">movie</string>
+
     <string name="no_connection_error">No internet connection!</string>
     <string name="no_date_error">No data returned!</string>
     <string name="no_favourites_error">No favourites added</string>

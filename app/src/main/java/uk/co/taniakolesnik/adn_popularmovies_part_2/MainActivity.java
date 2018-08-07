@@ -71,8 +71,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
             preference = getString(R.string.linkPreference_popular);
         }
 
-        Log.i(TAG, "onCreate menuItemId " + menuItemId);
-
         ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
         if (networkInfo != null && networkInfo.isConnected()) {

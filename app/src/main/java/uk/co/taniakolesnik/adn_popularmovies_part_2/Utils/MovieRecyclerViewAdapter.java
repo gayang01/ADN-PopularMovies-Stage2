@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import com.squareup.picasso.Picasso;
+
+import java.io.Serializable;
 import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -57,9 +59,8 @@ public class MovieRecyclerViewAdapter extends RecyclerView.Adapter<MovieRecycler
         return mData.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        @BindView(R.id.recyclerListItem)
-        ImageView recyclerTextView;
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener, Serializable {
+        @BindView(R.id.recyclerListItem) ImageView recyclerTextView;
 
         ViewHolder(View itemView) {
             super(itemView);
@@ -69,14 +70,10 @@ public class MovieRecyclerViewAdapter extends RecyclerView.Adapter<MovieRecycler
 
         @Override
         public void onClick(View v) {
+
             Movie movie = mData.get(getAdapterPosition());
             Intent intent = new Intent(context, MovieDetailsActivity.class);
-            intent.putExtra(context.getResources().getString(R.string.movie_title_bundle), movie.getTitle());
-            intent.putExtra(context.getResources().getString(R.string.movie_releaseDate_bundle), movie.getReleaseDate());
-            intent.putExtra(context.getResources().getString(R.string.movie_vote_bundle), movie.getVoteAverage());
-            intent.putExtra(context.getResources().getString(R.string.movie_id_bundle), movie.getMovieId());
-            intent.putExtra(context.getResources().getString(R.string.movie_plot_bundle), movie.getPlot());
-            intent.putExtra(context.getString(R.string.movie_image_bundle), movie.getImagePath());
+            intent.putExtra(context.getResources().getString(R.string.movie_bundle), movie);
             context.startActivity(intent);
 
         }

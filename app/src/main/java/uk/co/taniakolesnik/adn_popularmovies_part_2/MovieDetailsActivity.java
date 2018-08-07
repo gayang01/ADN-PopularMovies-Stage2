@@ -94,14 +94,16 @@ public class MovieDetailsActivity extends AppCompatActivity{
         ButterKnife.bind(this);
 
         Intent intent = getIntent();
-        String title = intent.getStringExtra(getString(R.string.movie_title_bundle));
-        String releaseDate = intent.getStringExtra(getString(R.string.movie_releaseDate_bundle));
-        int vote = intent.getIntExtra(getString(R.string.movie_vote_bundle),0);
-        final int movieId = intent.getIntExtra(getString(R.string.movie_id_bundle),0);
-        String plot = intent.getStringExtra(getString(R.string.movie_plot_bundle));
-        String image = intent.getStringExtra(getString(R.string.movie_image_bundle));
-        setMovieDetails(title, releaseDate, vote, plot, image);
+        Movie movie = (Movie) intent.getSerializableExtra(getString(R.string.movie_bundle));
 
+        String title = movie.getTitle();
+        String releaseDate = movie.getReleaseDate();
+        int vote = movie.getVoteAverage();
+        final int movieId = movie.getMovieId();
+        String plot = movie.getPlot();
+        String image = movie.getImagePath();
+
+        setMovieDetails(title, releaseDate, vote, plot, image);
 
         final Movie favourite = new Movie(title, releaseDate,image, vote, plot, movieId);
         videoUrl = makeVideoUrl(movieId);

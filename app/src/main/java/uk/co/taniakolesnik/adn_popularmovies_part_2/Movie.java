@@ -4,11 +4,13 @@ import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.Ignore;
 import android.arch.persistence.room.PrimaryKey;
 
+import java.io.Serializable;
+
 /**
  * Created by tetianakolesnik on 02/06/2018.
  */
 @Entity(tableName = "favourites")
-public class Movie {
+public class Movie implements Serializable {
 
     @PrimaryKey(autoGenerate = true)
     private int _id;
