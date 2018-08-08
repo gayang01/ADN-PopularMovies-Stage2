@@ -38,7 +38,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     public static final String API_KEY_VALUE = BuildConfig.THEMOVIDEDB_API_KEY;
     private static final String PREFERENCE_KEY = "preference";
     private static final String LIST_KEY = "list";
-    private static final String SCROLL_KEY = "scroll";
     private static final int LOADER_ID = 1;
     MovieRecyclerViewAdapter adapter;
     @BindView(R.id.recyclerView)
@@ -50,6 +49,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     private String preference;
     private int menuItemId;
     Parcelable mListState;
+    GridLayoutManager mGridLayoutManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,9 +81,9 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         }
 
         adapter = new MovieRecyclerViewAdapter(this, new ArrayList<Movie>());
-        recyclerListView.setLayoutManager(new GridLayoutManager(this, ListViewHelper.calculateNumbeOfColumns(getApplicationContext())));
+        mGridLayoutManager = new GridLayoutManager(this, ListViewHelper.calculateNumbeOfColumns(getApplicationContext()));
+        recyclerListView.setLayoutManager(mGridLayoutManager);
         recyclerListView.setAdapter(adapter);
-        recyclerListView.getLayoutManager().onRestoreInstanceState(mListState);
 
     }
 
@@ -99,9 +99,11 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-        menuItemId = savedInstanceState.getInt(PREFERENCE_KEY);
-        setPageAsPerSortSelected(menuItemId);
-        mListState = savedInstanceState.getParcelable(LIST_KEY);
+        if (savedInstanceState != null) {
+            menuItemId = savedInstanceState.getInt(PREFERENCE_KEY);
+            setPageAsPerSortSelected(menuItemId);
+            mListState = savedInstanceState.getParcelable(LIST_KEY);
+        }
     }
 
     @Override
@@ -162,6 +164,9 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
             progressBarView.setVisibility(View.GONE);
             if (menuItemId != 2) {
                 adapter.updateAdapter(data);
+                if (mListState != null) {
+                    mGridLayoutManager.onRestoreInstanceState(mListState);
+                }
             }
         }
     }
@@ -176,6 +181,9 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
             @Override
             public void onChanged(@Nullable List<Movie> movies) {
                 adapter.updateAdapter(movies);
+                if (mListState != null) {
+                    mGridLayoutManager.onRestoreInstanceState(mListState);
+                }
             }
         });
     }
